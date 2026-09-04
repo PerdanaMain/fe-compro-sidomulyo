@@ -37,7 +37,7 @@ export const serviceSlides: ServiceSlide[] = [
     headline: "RANCANG KAROSERI TRUK SESUAI KEBUTUHAN LOGISTIK",
     description:
       "Pembuatan box alumunium, wingbox, dump truck, dan karoseri custom berkekuatan tinggi serta berstandar keselamatan industri.",
-    bgImage: "/images/service-karoseri-custom.jpg",
+    bgImage: "/images/service-reconditioning-2.png",
     link: "/layanan/karoseri-custom-body",
   },
   {
@@ -48,7 +48,7 @@ export const serviceSlides: ServiceSlide[] = [
     headline: "REKONDISI KABIN & SASIS TRUK RUSAK BERAT KEMBALI PRIMA",
     description:
       "Pemulihan menyeluruh armada bekas kecelakaan, penataan sasis, press body, dan penggantian komponen struktur utama secara presisi.",
-    bgImage: "/images/service-reconditioning.jpg",
+    bgImage: "/images/service-karoseri-custom-2.png",
     link: "/layanan/rekondisi-reconditioning",
   },
   {
@@ -59,7 +59,7 @@ export const serviceSlides: ServiceSlide[] = [
     headline: "PENGECATAN STANDAR OVEN INDUSTRIAL & BRANDING FLEET",
     description:
       "Finishing bodi dengan teknologi cat oven anti karat durabilitas tinggi dan penyesuaian identitas visual livery perusahaan Anda.",
-    bgImage: "/images/service-painting.jpg",
+    bgImage: "/images/service-body-repair-2.png",
     link: "/layanan/painting-finishing",
   },
 ];
