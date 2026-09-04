@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Barlow Condensed', 'Oswald', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-brand-primary: #1D40AF;
+  --color-brand-accent: #F59E0B;
+  --color-brand-dark: #0A0E17;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAFA;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-heading {
+  font-family: 'Barlow Condensed', 'Oswald', sans-serif;
+}
