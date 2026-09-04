@@ -21,7 +21,7 @@ export interface CompanyInfo {
 
 export const companyData: CompanyInfo = {
   name: SITE_CONFIG.name,
-  shortName: "Sido Muljo",
+  shortName: "Sido Mulyo Abadhi",
   tagline: "Commercial Car Body Repair & Karoseri Specialist",
   experienceYears: 12,
   completedUnitsPerYear: 500,
@@ -29,12 +29,11 @@ export const companyData: CompanyInfo = {
   phone: SITE_CONFIG.phone,
   whatsapp: SITE_CONFIG.whatsappNumber,
   email: SITE_CONFIG.email,
-  address: `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.city}, ${SITE_CONFIG.address.province} ${SITE_CONFIG.address.postalCode}`,
+  address: "Jl. Bypass Krian KM 30, Kec. Krian, Kab. Sidoarjo, Jawa Timur",
   operatingHours: SITE_CONFIG.openingHours,
   socials: {
-    instagram: "https://instagram.com/sidomuljokarosen",
-    facebook: "https://facebook.com/sidomuljokarosen",
-    youtube: "https://youtube.com/@sidomuljokarosen"
+    instagram: "https://instagram.com/sidomulyoabadhi",
+    facebook: "https://facebook.com/sidomulyoabadhi",
+    youtube: "https://youtube.com/@sidomulyoabadhi"
   }
 };
-
