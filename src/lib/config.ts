@@ -15,9 +15,10 @@ export const SITE_CONFIG = {
     country: "ID"
   },
   openingHours: "Senin – Sabtu: 08.00 – 17.00 WIB",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=-7.403257,112.568877&z=16&output=embed",
   geo: {
-    latitude: -7.4081,
-    longitude: 112.5768
+    latitude: -7.403257,
+    longitude: 112.568877
   }
 };
 

@@ -1,9 +1,8 @@
-import React from "react";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Button } from "@/components/ui/button";
 import { companyData } from "@/data/company";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -58,7 +57,7 @@ export function AboutSection() {
           {/* Right Column Image */}
           <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3]">
             <Image
-              src="/images/about-workshop.jpg"
+              src="/images/about-bg.png"
               alt="Sido Muljo Karosen Workshop Facility"
               fill
               className="object-cover object-center"

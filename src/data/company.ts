@@ -12,10 +12,12 @@ export interface CompanyInfo {
   email: string;
   address: string;
   operatingHours: string;
+  mapsEmbedUrl: string;
   socials: {
     instagram: string;
     facebook: string;
     youtube: string;
+    tiktok: string;
   };
 }
 
@@ -31,9 +33,11 @@ export const companyData: CompanyInfo = {
   email: SITE_CONFIG.email,
   address: "Jl. Bypass Krian KM 30, Kec. Krian, Kab. Sidoarjo, Jawa Timur",
   operatingHours: SITE_CONFIG.openingHours,
+  mapsEmbedUrl: SITE_CONFIG.mapsEmbedUrl,
   socials: {
-    instagram: "https://instagram.com/sidomulyoabadhi",
+    instagram: "https://www.instagram.com/sidomulyoabadhi",
     facebook: "https://facebook.com/sidomulyoabadhi",
-    youtube: "https://youtube.com/@sidomulyoabadhi"
+    youtube: "https://youtube.com/@sidomulyoabadhi",
+    tiktok: "https://www.tiktok.com/@sidomulyoabadhi"
   }
 };

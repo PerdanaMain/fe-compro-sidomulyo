@@ -114,8 +114,8 @@ export default function KontakPage() {
             <Card className="p-2 bg-white border border-slate-200 h-full min-h-[400px] flex flex-col">
               <div className="w-full h-full min-h-[380px] rounded overflow-hidden relative bg-slate-200">
                 <iframe
-                  title="Lokasi Sido Muljo Karosen Krian Sidoarjo"
-                  src="https://maps.google.com/maps?q=-7.4081,112.5768&z=15&output=embed"
+                  title={`Lokasi ${companyData.name} Krian Sidoarjo`}
+                  src={companyData.mapsEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "380px" }}
