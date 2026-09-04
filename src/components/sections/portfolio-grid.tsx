@@ -1,72 +1,65 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { portfolioData } from "@/data/portfolio";
 
 export function PortfolioGrid() {
   const displayItems = portfolioData.slice(0, 3);
 
   return (
-    <section className="py-20 bg-slate-100 border-t border-slate-200">
+    <section className="py-16 md:py-20 bg-[#f4f3ef]">
       <Container>
-        <SectionHeading
-          eyebrow="REKAM JEJAK KAMI"
-          title="Hasil Pekerjaan Kami"
-          subtitle="Kumpulan hasil dokumentasi pengerjaan bodi truk, karoseri custom, dan restorasi armada yang kami tangani."
-        />
+        {/* Header Section - Left Aligned */}
+        <div className="max-w-2xl mb-8 md:mb-10">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-2">
+            Hasil Pekerjaan Kami
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+            Sebagian proyek perbaikan dan pembuatan bodi kendaraan yang telah kami selesaikan.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 md:mb-12">
           {displayItems.map((item) => (
-            <Card key={item.id} className="group overflow-hidden bg-white border border-slate-200 flex flex-col">
-              <div className="relative aspect-[4/3] bg-slate-900 overflow-hidden">
+            <div
+              key={item.id}
+              className="bg-white rounded-md p-4 flex flex-col border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow"
+            >
+              {/* Image Container with inner padding/margin */}
+              <div className="relative aspect-[4/3] rounded overflow-hidden bg-slate-100 mb-4">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-center"
                 />
-                
-                {/* BEFORE / AFTER Label Badge if isBeforeAfter */}
-                {item.isBeforeAfter && (
-                  <div className="absolute top-3 inset-x-3 flex justify-between z-10">
-                    <span className="bg-red-700 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded shadow">
-                      BEFORE
-                    </span>
-                    <span className="bg-emerald-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded shadow">
-                      AFTER
-                    </span>
-                  </div>
-                )}
               </div>
-              <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
-                <div>
-                  <Badge variant="amber" className="mb-2">
-                    {item.category}
-                  </Badge>
-                  <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
-                  <span>Klien: {item.client}</span>
-                  <span>{item.year}</span>
-                </div>
+
+              {/* Category Badge */}
+              <div className="mb-2">
+                <span className="bg-[#f5a623] text-slate-900 text-[11px] font-extrabold uppercase px-2.5 py-1 rounded-sm tracking-wider inline-block">
+                  {item.category}
+                </span>
               </div>
-            </Card>
+
+              {/* Title */}
+              <h3 className="font-sans font-bold text-base text-slate-900 tracking-tight leading-snug">
+                {item.title}
+              </h3>
+            </div>
           ))}
         </div>
 
-        <div className="text-center">
-          <Button href="/portfolio" variant="secondary" size="lg">
-            Lihat Semua Portofolio
-          </Button>
+        {/* Bottom CTA Button */}
+        <div className="flex justify-center">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center justify-center bg-[#154ec1] hover:bg-[#103eb3] text-white font-semibold text-sm px-6 py-3 rounded-md transition-colors shadow-sm"
+          >
+            Lihat Semua Portfolio
+          </Link>
         </div>
       </Container>
     </section>
