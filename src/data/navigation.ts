@@ -7,7 +7,7 @@ export const navItems: NavItem[] = [
   { label: "BERANDA", href: "/" },
   { label: "PORTFOLIO", href: "/portfolio" },
   { label: "TENTANG", href: "/tentang" },
-  { label: "PARTNERS", href: "/partner" },
+  { label: "KLIEN", href: "/klien" },
   { label: "KONTAK", href: "/kontak" }
 ];
 

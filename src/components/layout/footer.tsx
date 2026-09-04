@@ -25,7 +25,7 @@ const footerNavItems = [
   { label: "Layanan", href: "/#services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Tentang Kami", href: "/tentang" },
-  { label: "Partners", href: "/partner" },
+  { label: "Partners", href: "/klien" },
 ];
 
 export function Footer() {
