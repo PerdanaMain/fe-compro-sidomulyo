@@ -61,6 +61,11 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: ["/images/hero-bg.jpg"]
   },
+  icons: {
+    icon: "/images/logo-footer.png",
+    shortcut: "/images/logo-footer.png",
+    apple: "/images/logo-footer.png"
+  },
   robots: {
     index: true,
     follow: true
@@ -77,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`h-full ${inter.variable} ${barlowCondensed.variable}`}>
       <head>
+        <link rel="icon" href="/images/logo-footer.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

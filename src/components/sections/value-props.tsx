@@ -1,48 +1,58 @@
 import React from "react";
-import { Target, Clock, DollarSign, ShieldCheck } from "lucide-react";
+import { Shield, Check, CircleDollarSign, Clock } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Card } from "@/components/ui/card";
 
 export function ValueProps() {
   const values = [
     {
-      icon: Target,
-      title: "Akurasi Presisi",
-      desc: "Pengerjaan bodi & sasis presisi dengan alat standar pabrik serta tenaga ahli berpengalaman industri karoseri."
+      icon: (
+        <Shield className="w-6 h-6 text-[#1e3a8a] fill-[#1e3a8a]" />
+      ),
+      title: "Pengalaman",
+      desc: "Menangani armada niaga di Jawa Timur, dari truk logistik sampai bus operator.",
     },
     {
-      icon: Clock,
-      title: "Pengerjaan Tepat Waktu",
-      desc: "Proses pengerjaan terpantau dengan timeline pasti, menekan waktu armada nganggur agar cepat kembali beroperasi."
+      icon: (
+        <Check className="w-6 h-6 text-[#1e3a8a] stroke-[3]" />
+      ),
+      title: "Garansi Pengerjaan",
+      desc: "Setiap pekerjaan bodi dan cat kami jamin — kembali bila ada yang perlu diperbaiki.",
     },
     {
-      icon: DollarSign,
+      icon: (
+        <CircleDollarSign className="w-6 h-6 text-[#1e3a8a] fill-[#1e3a8a] stroke-white" />
+      ),
       title: "Harga Transparan",
-      desc: "Rincian estimasi biaya terbuka tanpa ada biaya tersembunyi, sesuai dengan kesepakatan awal dan SPK."
+      desc: "Penawaran rinci sebelum pengerjaan dimulai, tanpa biaya tersembunyi di tengah jalan.",
     },
     {
-      icon: ShieldCheck,
-      title: "Garansi Mutu",
-      desc: "Jaminan kualitas hasil pekerjaan, kekuatan las bodi, dan finishing pengecatan demi kepuasan penuh pemilik armada."
-    }
+      icon: (
+        <Clock className="w-6 h-6 text-[#1e3a8a] fill-[#1e3a8a] stroke-white" />
+      ),
+      title: "Tepat Waktu",
+      desc: "Jadwal disepakati di awal dan kami pegang — armada berhenti berarti kerugian bagi Anda.",
+    },
   ];
 
   return (
-    <section className="py-16 bg-slate-100 border-b border-slate-200">
+    <section className="py-16 md:py-20 bg-[#f5f5f3]">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((item, idx) => (
-            <Card key={idx} className="p-6 flex flex-col items-start bg-white hover:border-blue-600/40">
-              <div className="w-12 h-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-700 mb-4">
-                <item.icon className="w-6 h-6" />
+            <div
+              key={idx}
+              className="p-8 bg-white border border-slate-200/90 rounded-md shadow-xs flex flex-col justify-between items-start min-h-[230px]"
+            >
+              <div className="mb-6">{item.icon}</div>
+              <div>
+                <h3 className="font-heading text-xl font-bold tracking-tight text-slate-900 mb-2.5">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                  {item.desc}
+                </p>
               </div>
-              <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-slate-900 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                {item.desc}
-              </p>
-            </Card>
+            </div>
           ))}
         </div>
       </Container>

@@ -5,11 +5,9 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { label: "BERANDA", href: "/" },
-  { label: "TENTANG KAMI", href: "/tentang" },
-  { label: "LAYANAN", href: "/layanan" },
-  { label: "PORTOFOLIO", href: "/portfolio" },
-  { label: "TESTIMONI", href: "/testimoni" },
-  { label: "PARTNER", href: "/partner" },
+  { label: "PORTFOLIO", href: "/portfolio" },
+  { label: "TENTANG", href: "/tentang" },
+  { label: "PARTNERS", href: "/partner" },
   { label: "KONTAK", href: "/kontak" }
 ];
 
