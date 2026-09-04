@@ -1,16 +1,15 @@
-import React from "react";
-import Image from "next/image";
-import { ShieldCheck, Clock, Tag, Award, ArrowRight, MessageSquare } from "lucide-react";
-import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 import { companyData } from "@/data/company";
+import { ArrowRight, MessageSquare } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
-  const quickStats = [
-    { icon: ShieldCheck, title: "Armada Teruji", desc: "Standar pabrikan presisi" },
-    { icon: Clock, title: "Pengerjaan Tepat Waktu", desc: "Timeline terpantau pasti" },
-    { icon: Tag, title: "Harga Transparan", desc: "Tanpa biaya tersembunyi" },
-    { icon: Award, title: "Garansi Mutu", desc: "Jaminan hasil pekerjaan" }
+  const statNumbers = [
+    { value: `${companyData.completedUnitsPerYear}+`, label: "Service Body / Tahun" },
+    { value: `${companyData.experienceYears}+`, label: "Tahun Pengalaman" },
+    { value: `${companyData.satisfactionRate}%`, label: "Kepuasan Klien" },
+    { value: "100%", label: "Garansi Mutu Hasil" }
   ];
 
   return (
@@ -18,11 +17,11 @@ export function Hero() {
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Sido Muljo Karoseri Workshop"
+          src="/images/hero-bg.png"
+          alt="Sido Muljo Karosen Workshop"
           fill
           priority
-          className="object-cover object-center opacity-35"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/90" />
       </div>
@@ -52,7 +51,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Button
               href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                "Halo Sido Muljo Karoseri, saya ingin konsultasi mengenai perbaikan armada truk."
+                "Halo Sido Muljo Karosen, saya ingin konsultasi mengenai perbaikan armada truk."
               )}`}
               external
               variant="primary"
@@ -70,20 +69,17 @@ export function Hero() {
         </div>
       </Container>
 
-      {/* Floating Bottom Quick Features Bar */}
+      {/* Floating Bottom Quick Numbers Bar (Mockup Style) */}
       <div className="relative z-10 border-t border-white/10 bg-slate-900/80 backdrop-blur-md mt-8">
         <Container className="py-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickStats.map((item, idx) => (
-              <div key={idx} className="flex items-center gap-4 p-3 rounded-lg bg-white/5 border border-white/10 hover:border-amber-500/40 transition-colors">
-                <div className="w-11 h-11 rounded-full bg-blue-700/30 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0">
-                  <item.icon className="w-5 h-5 text-blue-400" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {statNumbers.map((stat, idx) => (
+              <div key={idx} className={`pt-4 sm:pt-0 ${idx > 0 ? "sm:pl-6" : ""} flex flex-col justify-center`}>
+                <div className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-400 tracking-tight">
+                  {stat.value}
                 </div>
-                <div>
-                  <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-slate-400">{item.desc}</p>
+                <div className="text-xs uppercase font-bold tracking-wider text-slate-300 mt-1">
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -93,3 +89,4 @@ export function Hero() {
     </section>
   );
 }
+

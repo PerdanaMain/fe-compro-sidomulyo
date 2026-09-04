@@ -6,15 +6,25 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { testimonialsData } from "@/data/testimonials";
+import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Testimoni Klien & Pelanggan",
-  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sido Muljo."
+  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sido Muljo Karosen."
 };
 
 export default function TestimoniPage() {
+  const breadcrumbLd = generateBreadcrumbSchema([
+    { name: "Beranda", item: "/" },
+    { name: "Testimoni", item: "/testimoni" }
+  ]);
+
   return (
     <div className="pt-28 pb-16 bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Container>
         <div className="py-8">
           <SectionHeading
@@ -61,3 +71,4 @@ export default function TestimoniPage() {
     </div>
   );
 }
+

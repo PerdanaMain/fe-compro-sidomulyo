@@ -1,30 +1,40 @@
 import React from "react";
 import { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Clock, MessageSquare } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { companyData } from "@/data/company";
+import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Hubungi & Lokasi Bengkel",
-  description: "Alamat lokasi bengkel karoseri Sido Muljo Sidoarjo, nomor telepon, WhatsApp, dan jam operasional."
+  title: "Hubungi & Lokasi Workshop Bengkel",
+  description: "Alamat lokasi workshop Sido Muljo Karosen Krian Sidoarjo, nomor telepon hotline, WhatsApp, dan jam operasional."
 };
 
 export default function KontakPage() {
+  const breadcrumbLd = generateBreadcrumbSchema([
+    { name: "Beranda", item: "/" },
+    { name: "Kontak", item: "/kontak" }
+  ]);
+
   const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Muljo Karoseri, saya ingin bertanya info lokasi / konsultasi perbaikan armada."
+    "Halo Sido Muljo Karosen, saya ingin bertanya info lokasi / konsultasi perbaikan armada."
   )}`;
 
   return (
     <div className="pt-28 pb-16 bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Container>
         <div className="py-8">
           <SectionHeading
             eyebrow="LOKASI & AKSES"
             title="Hubungi Bengkel Kami"
-            subtitle="Kunjungi lokasi bengkel kami di Sidoarjo atau hubungi tim customer service kami untuk konsultasi dan penawaran harga."
+            subtitle="Kunjungi lokasi bengkel kami di Krian, Sidoarjo atau hubungi tim customer service kami untuk konsultasi dan penawaran harga."
           />
         </div>
 
@@ -104,8 +114,8 @@ export default function KontakPage() {
             <Card className="p-2 bg-white border border-slate-200 h-full min-h-[400px] flex flex-col">
               <div className="w-full h-full min-h-[380px] rounded overflow-hidden relative bg-slate-200">
                 <iframe
-                  title="Lokasi Sido Muljo Karoseri"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.273620864386!2d112.7132!3d-7.4726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjgnMjEuNCJTIDExMsKwNDInNDcuNSJF!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
+                  title="Lokasi Sido Muljo Karosen Krian Sidoarjo"
+                  src="https://maps.google.com/maps?q=-7.4081,112.5768&z=15&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "380px" }}
@@ -121,3 +131,4 @@ export default function KontakPage() {
     </div>
   );
 }
+

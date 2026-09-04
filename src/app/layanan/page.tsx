@@ -9,15 +9,25 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { servicesData } from "@/data/services";
+import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Layanan Karoseri & Commercial Body Repair",
-  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi, dan pengecatan oven di Sidoarjo."
+  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi kabin, dan pengecatan oven di Sidoarjo dari Sido Muljo Karosen."
 };
 
 export default function LayananPage() {
+  const breadcrumbLd = generateBreadcrumbSchema([
+    { name: "Beranda", item: "/" },
+    { name: "Layanan", item: "/layanan" }
+  ]);
+
   return (
     <div className="pt-28 pb-16 bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Container>
         <div className="py-8">
           <SectionHeading
@@ -76,7 +86,7 @@ export default function LayananPage() {
                     size="md"
                     className="flex items-center gap-2"
                   >
-                    <span>Detail Layanan</span>
+                    <span>Lihat Detail Layanan</span>
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
@@ -90,3 +100,4 @@ export default function LayananPage() {
     </div>
   );
 }
+

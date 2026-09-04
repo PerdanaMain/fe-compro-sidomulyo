@@ -19,7 +19,7 @@ export function AboutSection() {
               className="mb-6"
             />
             <p className="text-slate-600 leading-relaxed text-base">
-              Berdiri lebih dari 12 tahun di Sidoarjo, <strong className="text-slate-900 font-semibold">Sido Muljo Karoseri</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
+              Berdiri lebih dari 12 tahun di Sidoarjo, <strong className="text-slate-900 font-semibold">Sido Muljo Karosen</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
             </p>
             <p className="text-slate-600 leading-relaxed text-base">
               Kami menggabungkan teknisi berpengalaman, teknologi fabrikasi hidrolik modern, dan standar kontrol kualitas ketat untuk menjamin setiap armada yang keluar dari bengkel kami aman, tangguh, dan estetik di jalanan.
@@ -45,9 +45,12 @@ export function AboutSection() {
               </div>
             </div>
 
-            <div className="pt-4">
-              <Button href="/kontak" variant="secondary" size="md">
-                Hubungi Kami
+            <div className="pt-4 flex items-center gap-4">
+              <Button href="/tentang" variant="secondary" size="md">
+                Tentang Kami
+              </Button>
+              <Button href="/kontak" variant="outline" size="md" className="!text-slate-900 !border-slate-300 hover:!bg-slate-100">
+                Hubungi Bengkel
               </Button>
             </div>
           </div>
@@ -56,10 +59,11 @@ export function AboutSection() {
           <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3]">
             <Image
               src="/images/about-workshop.jpg"
-              alt="Sido Muljo Workshop Facility"
+              alt="Sido Muljo Karosen Workshop Facility"
               fill
               className="object-cover object-center"
             />
+
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
           </div>
         </div>

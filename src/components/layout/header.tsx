@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { Phone, Clock, MapPin, Menu, X, ShieldCheck } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { companyData } from "@/data/company";
 import { navItems } from "@/data/navigation";
-import { Button } from "@/components/ui/button";
+import { Clock, MapPin, Menu, Phone, X } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,26 +49,15 @@ export function Header() {
 
       {/* Main Navbar */}
       <nav
-        className={`transition-all duration-300 ${
-          scrolled
-            ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
-            : "bg-gradient-to-b from-slate-950/80 to-transparent py-4"
-        }`}
+        className={`transition-all duration-300 ${scrolled
+          ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
+          : "bg-gradient-to-b from-slate-950/80 to-transparent py-4"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded bg-blue-800 border border-amber-500/50 flex items-center justify-center text-white font-extrabold font-heading text-xl shadow-md group-hover:bg-blue-700 transition-colors">
-              SM
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading text-lg sm:text-xl font-extrabold uppercase tracking-tight text-white group-hover:text-amber-400 transition-colors">
-                SIDO MULJO
-              </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-slate-400 -mt-1">
-                KAROSERI & BODY REPAIR
-              </span>
-            </div>
+            <Image src="/images/logo.png" height={46} width={46} alt={companyData.name} />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -87,15 +77,17 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Button
               href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                "Halo Sido Muljo Karoseri, saya ingin bertanya mengenai perbaikan armada."
+                "Halo Sido Muljo Karosen, saya ingin bertanya mengenai perbaikan armada."
               )}`}
               external
-              variant="primary"
+              variant="outline"
               size="sm"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 border-emerald-500/60 text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all"
             >
-              <Phone className="w-4 h-4" />
-              <span>{companyData.phone}</span>
+              <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.124.553 4.197 1.603 6.014L.065 24l6.101-1.6c1.76.96 3.753 1.464 5.865 1.464 6.645 0 12.03-5.385 12.03-12.031C24.061 5.385 18.676 0 12.031 0zm0 22.032c-1.802 0-3.568-.484-5.112-1.401l-.367-.218-3.794.995 1.012-3.698-.24-.38A9.972 9.972 0 0 1 2.032 12.03c0-5.513 4.486-9.999 10-9.999 5.514 0 10 4.486 10 9.999 0 5.514-4.486 10-10 10zm5.485-7.498c-.3-.15-1.776-.877-2.052-.977-.276-.1-.476-.15-.676.15-.2.3-.776.977-.951 1.176-.175.2-.35.225-.65.075-.3-.15-1.266-.467-2.411-1.488-.892-.795-1.493-1.777-1.668-2.077-.175-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.628-.926-2.228-.243-.585-.49-.505-.676-.515-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375s-1.05 1.027-1.05 2.503c0 1.476 1.075 2.899 1.225 3.099.15.2 2.114 3.228 5.122 4.529.715.31 1.273.495 1.708.633.718.228 1.372.196 1.888.119.576-.086 1.776-.726 2.026-1.427.25-.7.25-1.3.175-1.427-.075-.125-.275-.2-.575-.35z" />
+              </svg>
+              <span>CHAT WHATSAPP</span>
             </Button>
           </div>
 
@@ -126,18 +118,23 @@ export function Header() {
             </div>
             <div className="pt-2">
               <Button
-                href={`https://wa.me/${companyData.whatsapp}`}
+                href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
+                  "Halo Sido Muljo Karosen, saya ingin berkonsultasi."
+                )}`}
                 external
-                variant="primary"
+                variant="whatsapp"
                 size="md"
                 className="w-full flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4" />
-                <span>HUBUNGI KAMI VIA WA</span>
+                <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.124.553 4.197 1.603 6.014L.065 24l6.101-1.6c1.76.96 3.753 1.464 5.865 1.464 6.645 0 12.03-5.385 12.03-12.031C24.061 5.385 18.676 0 12.031 0zm0 22.032c-1.802 0-3.568-.484-5.112-1.401l-.367-.218-3.794.995 1.012-3.698-.24-.38A9.972 9.972 0 0 1 2.032 12.03c0-5.513 4.486-9.999 10-9.999 5.514 0 10 4.486 10 9.999 0 5.514-4.486 10-10 10zm5.485-7.498c-.3-.15-1.776-.877-2.052-.977-.276-.1-.476-.15-.676.15-.2.3-.776.977-.951 1.176-.175.2-.35.225-.65.075-.3-.15-1.266-.467-2.411-1.488-.892-.795-1.493-1.777-1.668-2.077-.175-.3-.019-.462.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.628-.926-2.228-.243-.585-.49-.505-.676-.515-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375s-1.05 1.027-1.05 2.503c0 1.476 1.075 2.899 1.225 3.099.15.2 2.114 3.228 5.122 4.529.715.31 1.273.495 1.708.633.718.228 1.372.196 1.888.119.576-.086 1.776-.726 2.026-1.427.25-.7.25-1.3.175-1.427-.075-.125-.275-.2-.575-.35z" />
+                </svg>
+                <span>CHAT VIA WHATSAPP</span>
               </Button>
             </div>
           </div>
         )}
+
       </nav>
     </header>
   );

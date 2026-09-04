@@ -43,7 +43,7 @@ export function ServicesGrid() {
                   href={`/layanan/${service.slug}`}
                   className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 hover:text-amber-500 transition-colors mt-2"
                 >
-                  <span>Detail Layanan</span>
+                  <span>Lihat Detail Layanan</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

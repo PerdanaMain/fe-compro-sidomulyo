@@ -228,3 +228,56 @@ Kalau suatu saat butuh fitur server-side Next.js (ISR, middleware, API routes), 
 - [ ] Google Business Profile dibuat (penting untuk SEO lokal "bengkel karoseri terdekat")
 - [ ] Lighthouse mobile ≥ 90 di semua halaman
 - [ ] Custom domain + HTTPS aktif
+
+---
+
+# BAGIAN 7 — Rencana Implementasi Berikutnya (Remediasi & Launch)
+
+> Kondisi saat ini: kode homepage + halaman dalam + SEO dasar sudah ada, static export sudah dikonfigurasi.
+> Hasil audit desain (vs mockup): ±85% sesuai. Plan ini menutup gap audit → konten asli → launch.
+> Total estimasi: **4–6 hari kerja**.
+
+## Sprint 1 — Remediasi Desain (± 1 hari) — *tidak butuh input klien, langsung eksekusi*
+
+1. **Stats bar hero sesuai mockup** — ganti 4 kartu ikon di `hero.tsx` dengan strip angka (500+ Service Body/Per Tahun, 12+ Tahun Pengalaman, dst), sumber angka dari `companyData` agar single source of truth.
+2. **Tombol header "CHAT WHATSAPP"** — ganti tombol amber nomor telepon dengan tombol outline + ikon WhatsApp (inline SVG — lucide tidak punya brand icon WA) + teks "CHAT WHATSAPP".
+3. **Migrasi `next/font`** — hapus `@import` Google Fonts di `globals.css`; import Barlow Condensed + Inter via `next/font/google` di `layout.tsx` (Oswald di-drop, hanya fallback). Mengurangi render-blocking & CLS → naikkan skor Lighthouse.
+4. **Hapus link mati Privacy/Terms di footer** — ganti dengan teks lokasi "Krian, Sidoarjo, Jawa Timur" sesuai mockup.
+5. **Samakan label dengan mockup** — tombol layanan "Lihat Detail Layanan"; tombol About jadi "Tentang Kami" (menaut ke halaman baru /tentang, lihat Sprint 3).
+6. **Keputusan top bar header** — rekomendasi: **pertahankan** (bagus untuk bisnis lokal: alamat & jam langsung terlihat), meski tidak ada di mockup. Kalau ingin 100% identik dengan mockup, hapus blok top bar.
+
+## Sprint 2 — Branding & Data Asli (± 0.5–1 hari) — *sebagian butuh input klien*
+
+1. **KEPUTUSAN BRAND (penghalang utama)**: nama tercatat inkonsisten — mockup & `companyData.name` = "Sido Muljo **Karosen**", tetapi metadata title, semua teks WhatsApp, judul peta, dan domain email memakai "Sido Muljo **Karoseri**". Samakan semuanya mengikuti nama resmi badan usaha (mockup indikasi kuat: "Karosen"). Buat konstanta tunggal di `lib/config.ts`, referensi dari mana saja.
+2. **Data kontak asli** di `company.ts` + `config.ts`: telepon/WA 0856-5404-5464 (format WA: 6285654045464), email `sidomuljokarosen@gmail.com`, alamat lengkap Krian/Sidomulyo, koordinat GPS & embed Google Maps aktual (sekarang pin generik pusat Sidoarjo).
+3. **URL sosmed asli** — perbarui juga `sameAs` di JSON-LD `seo.ts` (sekarang masih URL tebakan).
+4. **Ganti favicon** — `src/app/favicon.ico` masih bawaan create-next-app (logo Next.js!). Ganti dengan logo SM; tambah `icon.png`/`apple-icon` 512px.
+5. **Cleanup `public/`** — hapus boilerplate (file.svg, globe.svg, next.svg, vercel.svg, window.svg).
+
+## Sprint 3 — Konten & Halaman (± 1–2 hari) — *foto asli butuh klien*
+
+1. **Buat halaman `/tentang`** — ada di navigasi footer mockup; bagus untuk SEO (halaman profil usaha + sejarah + legalitas). Pindahkan/expand konten AboutSection ke sana.
+2. **Foto asli menggantikan placeholder**: hero (workshop), about, 4 layanan, 6–12 foto portfolio **unik** (sekarang 3 kartu portfolio memakai file gambar layanan yang sama). Kompres WebP, lebar maks 1600px, kompres sebelum commit.
+3. **Audit halaman dalam**: pastikan `layanan/[slug]` punya `generateStaticParams` + `generateMetadata` per slug; semua halaman punya title/description unik; link balik & CTA WA di tiap halaman berfungsi.
+4. **Testimoni** — data saat ini masih fiktif; pertahankan sampai testimoni asli + foto/izin klien ada, jangan tampilkan rating palsu ke publik tanpa dasar.
+
+## Sprint 4 — SEO & Performa (± 1 hari)
+
+1. **OG image dedicated 1200×630** — sekarang memakai `hero-bg.jpg` yang rasionya bukan 1.91:1 (crop acak saat di-share WA/sosmed).
+2. **JSON-LD tambahan**: schema `Service` di tiap `/layanan/[slug]`, `BreadcrumbList` di halaman dalam.
+3. **Verifikasi `sitemap.ts` & `robots.ts`** setelah /tentang ditambahkan.
+4. **Lighthouse mobile ≥ 90** semua halaman (migrasi font Sprint 1 ikut berkontribusi).
+5. **Audit alt text** semua gambar (deskriptif + keyword natural).
+
+## Sprint 5 — Deploy & Post-Launch (± 0.5 hari)
+
+1. Push ke GitHub → **Cloudflare Pages**: Connect to Git, preset `None`, build `npm run build`, output `out`, env `NODE_VERSION=22`.
+2. Beli domain (.com via Cloudflare Registrar; .id via registrar lokal) → Custom domains di project Pages → SSL otomatis.
+3. **Google Search Console**: verifikasi + submit `sitemap.xml`.
+4. **Google Business Profile** — paling berdampak untuk SEO lokal "bengkel karoseri terdekat".
+5. Verifikasi live: Rich Results Test untuk JSON-LD, sharing debugger untuk OG image, tes mobile fisik.
+
+## Urutan Eksekusi yang Disarankan
+
+Sprint 1 (langsung) → Sprint 4.1–4.2 (bisa paralel) → tunggu data klien untuk Sprint 2–3 foto → Sprint 5.
+Sprint 1 + 4 bisa selesai **hari ini** tanpa menunggu apa pun; Sprint 2–3 hanya tertahan di foto & konfirmasi nama brand.

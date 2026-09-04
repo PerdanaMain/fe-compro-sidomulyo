@@ -1,4 +1,5 @@
 import { SITE_CONFIG } from "./config";
+import { ServiceItem } from "@/data/services";
 
 export function generateLocalBusinessSchema() {
   return {
@@ -9,6 +10,7 @@ export function generateLocalBusinessSchema() {
     "@id": SITE_CONFIG.url,
     "url": SITE_CONFIG.url,
     "telephone": SITE_CONFIG.phone,
+    "email": SITE_CONFIG.email,
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -37,8 +39,42 @@ export function generateLocalBusinessSchema() {
       "closes": "17:00"
     },
     "sameAs": [
-      "https://www.instagram.com/sidomuljo.karoseri",
-      "https://www.facebook.com/sidomuljokaroseri"
+      "https://instagram.com/sidomuljokarosen",
+      "https://facebook.com/sidomuljokarosen",
+      "https://youtube.com/@sidomuljokarosen"
     ]
   };
 }
+
+export function generateServiceSchema(service: ServiceItem) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.fullDescription,
+    "provider": {
+      "@type": "AutoRepair",
+      "name": SITE_CONFIG.name,
+      "url": SITE_CONFIG.url
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Sidoarjo & Jawa Timur"
+    },
+    "serviceType": service.title
+  };
+}
+
+export function generateBreadcrumbSchema(items: { name: string; item: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": crumb.item.startsWith("http") ? crumb.item : `${SITE_CONFIG.url}${crumb.item}`
+    }))
+  };
+}
+

@@ -5,11 +5,11 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { CheckCircle2, ArrowLeft, MessageSquare, Phone } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { servicesData } from "@/data/services";
 import { companyData } from "@/data/company";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${service.title} | Sido Muljo Karoseri`,
+    title: service.title,
     description: service.shortDescription,
   };
 }
@@ -45,12 +45,28 @@ export default async function ServiceDetailPage({ params }: Props) {
     notFound();
   }
 
+  const serviceLd = generateServiceSchema(service);
+  const breadcrumbLd = generateBreadcrumbSchema([
+    { name: "Beranda", item: "/" },
+    { name: "Layanan", item: "/layanan" },
+    { name: service.title, item: `/layanan/${service.slug}` }
+  ]);
+
   const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    `Halo Sido Muljo Karoseri, saya ingin konsultasi mengenai layanan ${service.title}.`
+    `Halo Sido Muljo Karosen, saya ingin konsultasi mengenai layanan ${service.title}.`
   )}`;
 
   return (
     <div className="pt-28 pb-16 bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+
       <Container>
         {/* Back link */}
         <div className="mb-6">
@@ -153,3 +169,4 @@ export default async function ServiceDetailPage({ params }: Props) {
     </div>
   );
 }
+

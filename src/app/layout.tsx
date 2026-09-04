@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
+import { Inter, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
 import { SITE_CONFIG } from "@/lib/config";
 import { generateLocalBusinessSchema } from "@/lib/seo";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
+const barlowCondensed = Barlow_Condensed({
+  weight: ["600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-barlow",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
@@ -21,7 +35,8 @@ export const metadata: Metadata = {
     "rekondisi kabin truk",
     "wingbox sidoarjo",
     "bengkel bodi truk surabaya",
-    "pengecatan truk oven"
+    "pengecatan truk oven",
+    "karosen sidoarjo"
   ],
   authors: [{ name: SITE_CONFIG.name }],
   openGraph: {
@@ -60,14 +75,14 @@ export default function RootLayout({
   const jsonLd = generateLocalBusinessSchema();
 
   return (
-    <html lang="id" className="h-full">
+    <html lang="id" className={`h-full ${inter.variable} ${barlowCondensed.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col antialiased bg-slate-50 text-slate-900">
+      <body className="min-h-full flex flex-col antialiased bg-slate-50 text-slate-900 font-sans">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
@@ -76,3 +91,4 @@ export default function RootLayout({
     </html>
   );
 }
+

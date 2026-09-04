@@ -5,15 +5,25 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Card } from "@/components/ui/card";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { partnersData } from "@/data/partners";
+import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Mitra Perusahaan Armada",
-  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan armada kepada Sido Muljo Karoseri."
+  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan armada kepada Sido Muljo Karosen."
 };
 
 export default function PartnerPage() {
+  const breadcrumbLd = generateBreadcrumbSchema([
+    { name: "Beranda", item: "/" },
+    { name: "Partner", item: "/partner" }
+  ]);
+
   return (
     <div className="pt-28 pb-16 bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <Container>
         <div className="py-8">
           <SectionHeading
@@ -44,3 +54,4 @@ export default function PartnerPage() {
     </div>
   );
 }
+

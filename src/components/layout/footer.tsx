@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Youtube } from "lucide
 import { companyData } from "@/data/company";
 import { navItems } from "@/data/navigation";
 import { Container } from "@/components/ui/container";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -13,9 +14,7 @@ export function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-blue-800 border border-amber-500/50 flex items-center justify-center text-white font-extrabold font-heading text-xl">
-                SM
-              </div>
+              <Image src="/images/logo-footer.png" height={46} width={46} alt={companyData.name} />
               <div className="flex flex-col">
                 <span className="font-heading text-lg font-extrabold uppercase tracking-tight text-white">
                   SIDO MULJO
@@ -133,15 +132,11 @@ export function Footer() {
           <div>
             © {new Date().getFullYear()} {companyData.name}. All Rights Reserved.
           </div>
-          <div className="flex items-center gap-6">
-            <Link href="/kontak" className="hover:text-slate-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/kontak" className="hover:text-slate-400 transition-colors">
-              Terms of Service
-            </Link>
+          <div className="flex items-center gap-6 text-slate-400 font-medium">
+            <span>Krian, Sidoarjo, Jawa Timur</span>
           </div>
         </div>
+
       </Container>
     </footer>
   );

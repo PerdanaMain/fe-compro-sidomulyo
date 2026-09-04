@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from "@/lib/config";
+
 export interface CompanyInfo {
   name: string;
   shortName: string;
@@ -18,20 +20,21 @@ export interface CompanyInfo {
 }
 
 export const companyData: CompanyInfo = {
-  name: "Sido Muljo Karosen",
+  name: SITE_CONFIG.name,
   shortName: "Sido Muljo",
   tagline: "Commercial Car Body Repair & Karoseri Specialist",
   experienceYears: 12,
   completedUnitsPerYear: 500,
   satisfactionRate: 98,
-  phone: "+62 812-3456-7890",
-  whatsapp: "6281234567890",
-  email: "info@sidomuljokaroseri.com",
-  address: "Jl. Raya Sidoarjo No. 123, Candi, Sidoarjo, Jawa Timur 61271",
-  operatingHours: "Senin - Sabtu: 08:00 - 17:00 WIB",
+  phone: SITE_CONFIG.phone,
+  whatsapp: SITE_CONFIG.whatsappNumber,
+  email: SITE_CONFIG.email,
+  address: `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.city}, ${SITE_CONFIG.address.province} ${SITE_CONFIG.address.postalCode}`,
+  operatingHours: SITE_CONFIG.openingHours,
   socials: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    youtube: "https://youtube.com"
+    instagram: "https://instagram.com/sidomuljokarosen",
+    facebook: "https://facebook.com/sidomuljokarosen",
+    youtube: "https://youtube.com/@sidomuljokarosen"
   }
 };
+
