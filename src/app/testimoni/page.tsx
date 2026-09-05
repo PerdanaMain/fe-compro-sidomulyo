@@ -10,7 +10,10 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Testimoni Klien & Pelanggan",
-  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sido Muljo Karosen."
+  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sido Mulyo Abadhi.",
+  alternates: {
+    canonical: "/testimoni"
+  }
 };
 
 export default function TestimoniPage() {
@@ -28,8 +31,9 @@ export default function TestimoniPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="KEPUASAN KLIEN"
-            title="Apa Kata Pelanggan Kami"
+            title="Testimoni Klien & Kepercayaan Pelanggan Karoseri"
             subtitle="Kepercayaan pemilik armada dan fleet manager merupakan bukti komitmen kami terhadap kualitas, ketepatan waktu, dan garansi."
           />
         </div>

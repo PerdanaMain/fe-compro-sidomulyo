@@ -9,8 +9,11 @@ import { companyData } from "@/data/company";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Hubungi & Lokasi Workshop Bengkel",
-  description: "Alamat lokasi workshop Sido Muljo Karosen Krian Sidoarjo, nomor telepon hotline, WhatsApp, dan jam operasional."
+  title: "Hubungi & Lokasi Workshop Bengkel Karoseri Sidoarjo",
+  description: "Alamat lokasi workshop Sido Mulyo Abadhi Krian Sidoarjo, nomor telepon hotline, WhatsApp, dan jam operasional.",
+  alternates: {
+    canonical: "/kontak"
+  }
 };
 
 export default function KontakPage() {
@@ -20,7 +23,7 @@ export default function KontakPage() {
   ]);
 
   const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Muljo Karosen, saya ingin bertanya info lokasi / konsultasi perbaikan armada."
+    "Halo Sido Mulyo Abadhi, saya ingin bertanya info lokasi / konsultasi perbaikan armada."
   )}`;
 
   return (
@@ -32,8 +35,9 @@ export default function KontakPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="LOKASI & AKSES"
-            title="Hubungi Bengkel Kami"
+            title="Bengkel Karoseri Krian, Sidoarjo — Lokasi & Kontak Official"
             subtitle="Kunjungi lokasi bengkel kami di Krian, Sidoarjo atau hubungi tim customer service kami untuk konsultasi dan penawaran harga."
           />
         </div>

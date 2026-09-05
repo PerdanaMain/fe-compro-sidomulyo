@@ -30,7 +30,7 @@ export const testimonialsData: TestimonialItem[] = [
     name: "Rian Prasetyo",
     role: "Operational Supervisor",
     company: "PT Cargo Nusantara Express",
-    content: "Sudah berlangganan rekondisi bodi truk di Sido Muljo Karoseri selama 5 tahun. Kualitas cat oven tahan lama dan tidak gampang memudar.",
+    content: "Sudah berlangganan rekondisi bodi truk di Sido Mulyo Abadhi selama 5 tahun. Kualitas cat oven tahan lama dan tidak gampang memudar.",
     rating: 5
   }
 ];

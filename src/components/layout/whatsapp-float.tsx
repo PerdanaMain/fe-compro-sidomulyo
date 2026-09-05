@@ -6,7 +6,7 @@ import { companyData } from "@/data/company";
 
 export function WhatsAppFloat() {
   const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Muljo Karoseri, saya ingin konsultasi mengenai armada truk saya."
+    "Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai armada truk saya."
   )}`;
 
   return (

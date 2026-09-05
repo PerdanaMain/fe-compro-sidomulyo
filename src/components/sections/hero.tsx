@@ -136,7 +136,7 @@ export function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Button
               href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                `Halo Sido Muljo Karosen, saya ingin konsultasi mengenai ${currentSlide.category}.`
+                `Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai ${currentSlide.category}.`
               )}`}
               external
               variant="primary"

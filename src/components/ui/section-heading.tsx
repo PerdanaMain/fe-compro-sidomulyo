@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "left" | "center" | "right";
   dark?: boolean;
+  as?: "h1" | "h2" | "h3";
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export function SectionHeading({
   subtitle,
   align = "center",
   dark = false,
+  as: Component = "h2",
   className = ""
 }: SectionHeadingProps) {
   const alignStyles = {
@@ -36,13 +38,13 @@ export function SectionHeading({
           )}
         </div>
       )}
-      <h2
+      <Component
         className={`font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight ${
           dark ? "text-white" : "text-slate-900"
         }`}
       >
         {title}
-      </h2>
+      </Component>
       {subtitle && (
         <p
           className={`mt-4 text-base sm:text-lg leading-relaxed ${
@@ -55,3 +57,4 @@ export function SectionHeading({
     </div>
   );
 }
+

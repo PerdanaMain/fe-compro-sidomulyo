@@ -71,7 +71,7 @@ export function Header() {
           <div className="hidden lg:flex items-center">
             <a
               href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                "Halo Sido Muljo Karosen, saya ingin bertanya mengenai perbaikan armada."
+                "Halo Sido Mulyo Abadhi, saya ingin bertanya mengenai perbaikan armada."
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -119,7 +119,7 @@ export function Header() {
             <div className="pt-2">
               <a
                 href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                  "Halo Sido Muljo Karosen, saya ingin berkonsultasi."
+                  "Halo Sido Mulyo Abadhi, saya ingin berkonsultasi."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

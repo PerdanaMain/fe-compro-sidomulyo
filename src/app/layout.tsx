@@ -22,6 +22,9 @@ const barlowCondensed = Barlow_Condensed({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
+  alternates: {
+    canonical: "./"
+  },
   title: {
     default: `${SITE_CONFIG.name} | Commercial Car Body Repair & Karoseri Sidoarjo`,
     template: `%s | ${SITE_CONFIG.name}`
@@ -36,7 +39,8 @@ export const metadata: Metadata = {
     "wingbox sidoarjo",
     "bengkel bodi truk surabaya",
     "pengecatan truk oven",
-    "karosen sidoarjo"
+    "karoseri surabaya",
+    "karoseri terdekat"
   ],
   authors: [{ name: SITE_CONFIG.name }],
   openGraph: {
@@ -48,7 +52,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     images: [
       {
-        url: "/images/hero-bg.jpg",
+        url: "/images/hero-bg.png",
         width: 1200,
         height: 630,
         alt: SITE_CONFIG.fullName
@@ -59,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_CONFIG.fullName,
     description: SITE_CONFIG.description,
-    images: ["/images/hero-bg.jpg"]
+    images: ["/images/hero-bg.png"]
   },
   icons: {
     icon: "/images/logo-footer.png",

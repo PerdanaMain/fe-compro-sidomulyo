@@ -8,7 +8,10 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Portofolio Pekerjaan Karoseri & Repair",
-  description: "Dokumentasi hasil pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom Sido Muljo Karosen di Sidoarjo."
+  description: "Dokumentasi hasil pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom Sido Mulyo Abadhi di Sidoarjo.",
+  alternates: {
+    canonical: "/portfolio"
+  }
 };
 
 export default function PortfolioPage() {
@@ -26,8 +29,9 @@ export default function PortfolioPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="REKAM JEJAK PEKERJAAN"
-            title="Portofolio Bengkel"
+            title="Portofolio Pekerjaan Karoseri & Perbaikan Truk Sido Mulyo Abadhi"
             subtitle="Dokumentasi pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom yang diselesaikan oleh tim profesional kami."
           />
         </div>

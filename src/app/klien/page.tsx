@@ -9,7 +9,10 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Klien & Pelanggan Perusahaan Armada",
-  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan dan pembuatan bodi armada kepada Sido Mulyo Abadhi."
+  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan dan pembuatan bodi armada kepada Sido Mulyo Abadhi.",
+  alternates: {
+    canonical: "/klien"
+  }
 };
 
 export default function KlienPage() {
@@ -27,8 +30,9 @@ export default function KlienPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="KLIEN & PELANGGAN"
-            title="Klien Perusahaan Kami"
+            title="Klien & Mitra Armada Karoseri Sido Mulyo Abadhi"
             subtitle="Kami bangga dipercaya sebagai mitra perawatan dan pembuatan karoseri armada niaga berbagai perusahaan terkemuka."
           />
         </div>

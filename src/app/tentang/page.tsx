@@ -12,8 +12,11 @@ import { SITE_CONFIG } from "@/lib/config";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami — Profil & Sejarah Workshop",
-  description: "Profil lengkap Sido Muljo Karosen Sidoarjo. Pengalaman 12+ tahun spesialis perbaikan bodi truk, pembuatan karoseri custom, dan rekondisi armada komersial."
+  title: "Tentang Kami — Profil & Sejarah Workshop Karoseri",
+  description: "Profil lengkap Sido Mulyo Abadhi Sidoarjo. Pengalaman 12+ tahun spesialis perbaikan bodi truk, pembuatan karoseri custom, dan rekondisi armada komersial.",
+  alternates: {
+    canonical: "/tentang"
+  }
 };
 
 export default function TentangPage() {
@@ -55,9 +58,10 @@ export default function TentangPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="PROFIL BENGKEL"
-            title="Tentang Sido Muljo Karosen"
-            subtitle="Spesialis perbaikan bodi truk dan pembuatan karoseri commercial vehicle terpercaya di Sidoarjo, Jawa Timur."
+            title="Tentang Sido Mulyo Abadhi — Bengkel Karoseri & Perbaikan Bodi Truk"
+            subtitle="Spesialis perbaikan bodi truk dan pembuatan karoseri commercial vehicle terpercaya di Sidoarjo & Surabaya, Jawa Timur."
           />
         </div>
 
@@ -99,7 +103,7 @@ export default function TentangPage() {
           <div className="lg:col-span-6 relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
             <Image
               src="/images/about-workshop.jpg"
-              alt="Fasilitas Workshop Sido Muljo Karosen Krian Sidoarjo"
+              alt="Fasilitas Workshop Sido Mulyo Abadhi Krian Sidoarjo"
               fill
               priority
               className="object-cover object-center"
@@ -158,7 +162,7 @@ export default function TentangPage() {
             <div className="pt-2">
               <Button
                 href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-                  "Halo Sido Muljo Karosen, saya ingin survey lokasi / konsultasi perbaikan armada."
+                  "Halo Sido Mulyo Abadhi, saya ingin survey lokasi / konsultasi perbaikan armada."
                 )}`}
                 external
                 variant="primary"

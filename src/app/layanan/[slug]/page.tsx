@@ -32,8 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: service.title,
+    title: `${service.title} — Bengkel Karoseri Sidoarjo`,
     description: service.shortDescription,
+    alternates: {
+      canonical: `/layanan/${service.slug}`
+    }
   };
 }
 
@@ -53,7 +56,7 @@ export default async function ServiceDetailPage({ params }: Props) {
   ]);
 
   const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    `Halo Sido Muljo Karosen, saya ingin konsultasi mengenai layanan ${service.title}.`
+    `Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai layanan ${service.title}.`
   )}`;
 
   return (

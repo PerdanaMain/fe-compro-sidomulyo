@@ -22,10 +22,12 @@ function TikTokIcon({ className = "w-4 h-4" }: { className?: string }) {
 }
 
 const footerNavItems = [
-  { label: "Layanan", href: "/#services" },
+  { label: "Layanan", href: "/layanan" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Artikel & Panduan", href: "/artikel" },
   { label: "Tentang Kami", href: "/tentang" },
-  { label: "Partners", href: "/klien" },
+  { label: "Klien & Mitra", href: "/klien" },
+  { label: "Kontak Bengkel", href: "/kontak" }
 ];
 
 export function Footer() {
@@ -72,7 +74,7 @@ export function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://tiktok.com"
+                href={companyData.socials.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"

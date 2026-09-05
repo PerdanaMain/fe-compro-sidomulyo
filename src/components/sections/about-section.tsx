@@ -18,7 +18,7 @@ export function AboutSection() {
               className="mb-6"
             />
             <p className="text-slate-600 leading-relaxed text-base">
-              Berdiri lebih dari 12 tahun di Sidoarjo, <strong className="text-slate-900 font-semibold">Sido Muljo Karosen</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
+              Berdiri lebih dari 12 tahun di Sidoarjo, <strong className="text-slate-900 font-semibold">Sido Mulyo Abadhi</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
             </p>
             <p className="text-slate-600 leading-relaxed text-base">
               Kami menggabungkan teknisi berpengalaman, teknologi fabrikasi hidrolik modern, dan standar kontrol kualitas ketat untuk menjamin setiap armada yang keluar dari bengkel kami aman, tangguh, dan estetik di jalanan.
@@ -58,7 +58,7 @@ export function AboutSection() {
           <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3]">
             <Image
               src="/images/about-bg.png"
-              alt="Sido Muljo Karosen Workshop Facility"
+              alt="Fasilitas Workshop Karoseri Truk Sido Mulyo Abadhi Krian Sidoarjo"
               fill
               className="object-cover object-center"
             />

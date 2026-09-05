@@ -13,7 +13,10 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Layanan Karoseri & Commercial Body Repair",
-  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi kabin, dan pengecatan oven di Sidoarjo dari Sido Muljo Karosen."
+  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi kabin, dan pengecatan oven di Sidoarjo dari Sido Mulyo Abadhi.",
+  alternates: {
+    canonical: "/layanan"
+  }
 };
 
 export default function LayananPage() {
@@ -31,8 +34,9 @@ export default function LayananPage() {
       <Container>
         <div className="py-8">
           <SectionHeading
+            as="h1"
             eyebrow="SOLUSI ARMADA KOMERSIAL"
-            title="Layanan Bengkel Kami"
+            title="Layanan Bengkel Karoseri & Commercial Body Repair"
             subtitle="Kami menyediakan solusi lengkap perbaikan, pembuatan, dan perawatan bodi armada kendaraan niaga dengan standar kualitas tinggi."
           />
         </div>
@@ -48,7 +52,7 @@ export default function LayananPage() {
               <div className="lg:col-span-5 relative aspect-[4/3] rounded-lg overflow-hidden bg-slate-900">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} — Karoseri & Body Repair Sido Mulyo Abadhi Sidoarjo`}
                   fill
                   className="object-cover object-center"
                 />
