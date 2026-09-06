@@ -1,14 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import { ShieldCheck, Award, Wrench, Users, CheckCircle2, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { MetricStats } from "@/components/ui/metric-stats";
+import { WhyChooseUs } from "@/components/sections/why-choose-us";
+import { ProcessSteps } from "@/components/sections/process-steps";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { companyData } from "@/data/company";
-import { SITE_CONFIG } from "@/lib/config";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -25,179 +23,80 @@ export default function TentangPage() {
     { name: "Tentang Kami", item: "/tentang" }
   ]);
 
-  const highlights = [
-    {
-      icon: ShieldCheck,
-      title: "Presisi & Keamanan Sasis",
-      desc: "Setiap pengerjaan sasis dan rangka karoseri diperhitungkan dengan kekuatan beban (payload) optimal sesuai standar regulasi Kemenhub."
-    },
-    {
-      icon: Wrench,
-      title: "Peralatan Hidrolik & Oven",
-      desc: "Dilengkapi fasilitas press hidrolik modern dan spray booth oven suhu terkontrol untuk ketahanan cat maksimal terhadap iklim tropis."
-    },
-    {
-      icon: Award,
-      title: "Garansi Mutu Pekerjaan",
-      desc: "Seluruh perbaikan bodi dan rekondisi kabin terlindungi oleh garansi resmi pengerjaan dari bengkel kami."
-    },
-    {
-      icon: Users,
-      title: "Teknisi Senior Berpengalaman",
-      desc: "Tim tukang las, ketok, dan painter profesional yang berpengalaman lebih dari 10 tahun menangani ratusan unit armada."
-    }
+  const metricsData = [
+    { value: `${companyData.completedUnitsPerYear}+`, label: "Kendaraan Sudah Ditangani" },
+    { value: `${companyData.experienceYears}`, label: "Tahun Berpengalaman di Bidang Ini" },
+    { value: "4", label: "Layanan Bodi Kendaraan Komersial" }
   ];
 
   return (
-    <div className="pt-28 pb-16 bg-slate-50">
+    <div className="pt-24 md:pt-28 pb-0 bg-white min-h-screen text-slate-800">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
-      <Container>
-        <div className="py-8">
-          <SectionHeading
-            as="h1"
-            eyebrow="PROFIL BENGKEL"
-            title="Tentang Sido Mulyo Abadhi — Bengkel Karoseri & Perbaikan Bodi Truk"
-            subtitle="Spesialis perbaikan bodi truk dan pembuatan karoseri commercial vehicle terpercaya di Sidoarjo & Surabaya, Jawa Timur."
-          />
-        </div>
-
-        {/* Story Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-block px-3 py-1 bg-amber-500/10 text-amber-600 rounded text-xs font-bold uppercase tracking-wider">
-              SEJARAH & KOMITMEN
+      {/* Header Section */}
+      <section className="py-8 md:py-12 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start max-w-6xl mx-auto mb-10">
+            <div className="md:col-span-4">
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-wide">
+                Tentang Kami
+              </h1>
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-slate-900">
-              Mitra Handal Armada Niaga Anda Sejak 2012
-            </h2>
-            <p className="text-slate-600 leading-relaxed">
-              Berpusat di Krian, Sidoarjo, <strong className="text-slate-900 font-semibold">{companyData.name}</strong> didirikan dengan satu fokus utama: menyediakan layanan perbaikan bodi kendaraan komersial (commercial car body repair) dan fabrikasi karoseri yang presisi, tangguh, dan tepat waktu.
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              Kami memahami bahwa setiap hari armada truk Anda berada di bengkel adalah potensi kerugian operasional. Oleh karena itu, sistem manajemen pengerjaan kami dirancang untuk meminimalkan downtime kendaraan dengan tetap menjaga kualitas pengerjaan sesuai standar keselamatan jalan.
-            </p>
-            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200">
-              <div className="p-4 bg-white rounded-lg border border-slate-200">
-                <div className="font-heading text-3xl font-extrabold text-blue-800">
-                  {companyData.experienceYears}+ Tahun
-                </div>
-                <div className="text-xs text-slate-500 font-semibold uppercase mt-1">
-                  Pengalaman Bengkel
-                </div>
-              </div>
-              <div className="p-4 bg-white rounded-lg border border-slate-200">
-                <div className="font-heading text-3xl font-extrabold text-blue-800">
-                  {companyData.completedUnitsPerYear}+ Unit
-                </div>
-                <div className="text-xs text-slate-500 font-semibold uppercase mt-1">
-                  Perbaikan / Tahun
-                </div>
-              </div>
+            <div className="md:col-span-8">
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                Sido Mulyo Abadhi berdiri di Krian, Sidoarjo, dengan fokus pada perbaikan dan pembuatan bodi kendaraan komersial. Kami menangani berbagai kebutuhan kendaraan yang digunakan untuk mendukung aktivitas operasional sehari-hari, mulai dari truk logistik hingga kendaraan angkutan. Seiring berkembangnya kebutuhan pelanggan, kami terus menjaga kualitas pengerjaan dan ketelitian di setiap kendaraan yang kami tangani.
+              </p>
             </div>
           </div>
 
-          <div className="lg:col-span-6 relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+          {/* Metric Stats Bar */}
+          <div className="max-w-6xl mx-auto mb-12">
+            <MetricStats metrics={metricsData} />
+          </div>
+
+          {/* Banner Workshop Image with Centered Overlay Logo */}
+          <div className="max-w-6xl mx-auto relative aspect-[21/9] sm:aspect-[3/1] rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-900 mb-8">
             <Image
               src="/images/about-workshop.jpg"
-              alt="Fasilitas Workshop Sido Mulyo Abadhi Krian Sidoarjo"
+              alt="Fasilitas Workshop Sido Mulyo Abadhi"
               fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
               priority
-              className="object-cover object-center"
+              className="object-cover object-center brightness-75"
             />
-          </div>
-        </div>
-
-        {/* Key Highlights */}
-        <div className="mb-16">
-          <SectionHeading
-            eyebrow="KEUNGGULAN KAMI"
-            title="Mengapa Memilih Bengkel Kami?"
-            subtitle="Standar pengerjaan dan fasilitas pendukung yang menjamin hasil terbaik bagi investasi kendaraan niaga Anda."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {highlights.map((item, idx) => (
-              <Card key={idx} className="p-6 bg-white border border-slate-200 space-y-4 hover:border-blue-700/50 transition-colors">
-                <div className="w-12 h-12 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-800">
-                  <item.icon className="w-6 h-6" />
-                </div>
-                <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Location & Facility Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-          <Card className="lg:col-span-7 p-8 bg-slate-900 text-white space-y-6">
-            <h3 className="font-heading text-2xl font-extrabold uppercase tracking-wide text-white border-b border-slate-800 pb-3">
-              Fasilitas & Kapasitas Bengkel
-            </h3>
-            <ul className="space-y-3 text-sm text-slate-300">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                <span>Area kerja luas yang mampu menampung hingga 15–20 unit truk besar bersamaan.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                <span>Peralatan las CO2, mesin potong bending plat hidrolik, dan alat tarik sasis modern.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                <span>Stok bahan baku plat besi tebal, pipa hollow, dan sparepart karoseri berkualitas.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-                <span>Layanan konsultasi teknis gratis dan inspeksi awal kondisi kerusakan armada.</span>
-              </li>
-            </ul>
-            <div className="pt-2">
-              <Button
-                href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-                  "Halo Sido Mulyo Abadhi, saya ingin survey lokasi / konsultasi perbaikan armada."
-                )}`}
-                external
-                variant="primary"
-                size="md"
-              >
-                Konsultasi Pengerjaan Gratis
-              </Button>
-            </div>
-          </Card>
-
-          <Card className="lg:col-span-5 p-8 bg-white border border-slate-200 space-y-6">
-            <h3 className="font-heading text-xl font-bold uppercase tracking-wide text-slate-900 border-b border-slate-200 pb-3">
-              Info Alamat & Kontak
-            </h3>
-            <div className="space-y-4 text-sm text-slate-700">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-blue-800 shrink-0 mt-1" />
-                <div>
-                  <div className="font-bold text-slate-900">Alamat Workshop:</div>
-                  <div>{companyData.address}</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-blue-800 shrink-0 mt-1" />
-                <div>
-                  <div className="font-bold text-slate-900">Jam Operasional:</div>
-                  <div>{companyData.operatingHours}</div>
-                </div>
+            {/* Centered Circular Logo Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-slate-950/80 border-2 border-white/80 p-3 sm:p-4 flex items-center justify-center shadow-2xl backdrop-blur-sm">
+                <Image
+                  src="/images/logo-footer.png"
+                  alt="Sido Mulyo Abadhi Logo"
+                  width={110}
+                  height={110}
+                  className="object-contain"
+                />
               </div>
             </div>
-          </Card>
-        </div>
-      </Container>
+          </div>
+        </Container>
+      </section>
 
-      <CtaBanner />
+      {/* Mengapa Memilih Kami Section */}
+      <WhyChooseUs />
+
+      {/* Alur Pengerjaan Section */}
+      <ProcessSteps />
+
+      {/* CTA Banner Section */}
+      <CtaBanner
+        title="Pengalaman Kami, Untuk Kebutuhan Armada Anda"
+        subtitle="Dengan pengalaman bertahun-tahun menangani berbagai kendaraan komersial, kami siap membantu Anda menemukan solusi yang tepat."
+        buttonText="Konsultasi Sekarang"
+        message="Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai kebutuhan armada kendaraan saya."
+      />
     </div>
   );
 }
+
