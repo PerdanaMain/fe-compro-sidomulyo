@@ -24,7 +24,6 @@ function TikTokIcon({ className = "w-4 h-4" }: { className?: string }) {
 const footerNavItems = [
   { label: "Layanan", href: "/layanan" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Artikel & Panduan", href: "/artikel" },
   { label: "Tentang Kami", href: "/tentang" },
   { label: "Klien & Mitra", href: "/klien" },
   { label: "Kontak Bengkel", href: "/kontak" }
