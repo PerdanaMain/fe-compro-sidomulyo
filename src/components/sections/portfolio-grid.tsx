@@ -1,67 +1,69 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { PortfolioCard } from "@/components/ui/portfolio-card";
 import { portfolioData } from "@/data/portfolio";
 
-export function PortfolioGrid() {
-  const displayItems = portfolioData.slice(0, 3);
+interface PortfolioGridProps {
+  title?: string;
+  subtitle?: string;
+  limit?: number;
+  align?: "left" | "center";
+  buttonText?: string;
+  href?: string;
+  className?: string;
+}
+
+export function PortfolioGrid({
+  title = "Hasil Pekerjaan Kami",
+  subtitle = "Temukan berbagai portofolio hasil pengerjaan karoseri dan perbaikan armada terbaik kami.",
+  limit = 3,
+  align = "center",
+  buttonText = "Lihat Semua Portofolio",
+  href = "/portofolio",
+  className = "py-16 sm:py-20 bg-[#f4f7fc] border-t border-slate-200"
+}: PortfolioGridProps) {
+  const displayItems = portfolioData.slice(0, limit);
 
   return (
-    <section className="py-16 md:py-20 bg-[#f4f3ef]">
+    <section className={className}>
       <Container>
-        {/* Header Section - Left Aligned */}
-        <div className="max-w-2xl mb-8 md:mb-10">
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-2">
-            Hasil Pekerjaan Kami
+        {/* Header Section */}
+        <div
+          className={`max-w-3xl mb-10 space-y-2 ${
+            align === "center" ? "mx-auto text-center" : "text-left"
+          }`}
+        >
+          <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-wide">
+            {title}
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-            Sebagian proyek perbaikan dan pembuatan bodi kendaraan yang telah kami selesaikan.
-          </p>
+          {subtitle && (
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
+              {subtitle}
+            </p>
+          )}
         </div>
 
         {/* Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
           {displayItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-md p-4 flex flex-col border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow"
-            >
-              {/* Image Container with inner padding/margin */}
-              <div className="relative aspect-[4/3] rounded overflow-hidden bg-slate-100 mb-4">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover object-center"
-                />
-              </div>
-
-              {/* Category Badge */}
-              <div className="mb-2">
-                <span className="bg-[#f5a623] text-slate-900 text-[11px] font-extrabold uppercase px-2.5 py-1 rounded-sm tracking-wider inline-block">
-                  {item.category}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h3 className="font-sans font-bold text-base text-slate-900 tracking-tight leading-snug">
-                {item.title}
-              </h3>
-            </div>
+            <PortfolioCard key={item.id} item={item} />
           ))}
         </div>
 
         {/* Bottom CTA Button */}
-        <div className="flex justify-center">
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center justify-center bg-[#154ec1] hover:bg-[#103eb3] text-white font-semibold text-sm px-6 py-3 rounded-md transition-colors shadow-sm"
-          >
-            Lihat Semua Portfolio
-          </Link>
-        </div>
+        {buttonText && href && (
+          <div className="text-center">
+            <Link
+              href={href}
+              className="inline-flex items-center justify-center bg-[#154ec1] hover:bg-[#113ea0] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-md shadow-sm transition-colors"
+            >
+              {buttonText}
+            </Link>
+          </div>
+        )}
       </Container>
     </section>
   );
 }
+
