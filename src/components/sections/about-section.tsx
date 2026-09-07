@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Target, Compass } from "lucide-react";
+import { VisionMission } from "@/components/sections/vision-mission";
 import Image from "next/image";
 
 export function AboutSection() {
@@ -43,39 +43,6 @@ export function AboutSection() {
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
-          </div>
-        </div>
-
-        {/* Vision & Mission Cards Row at Bottom */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 pt-8 border-t border-slate-200/80">
-          {/* Visi */}
-          <div className="bg-white p-6 sm:p-7 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-lg bg-[#1e3a8a]/10 text-[#1e3a8a] flex items-center justify-center shrink-0">
-                <Target className="w-5 h-5 stroke-[2.2]" />
-              </div>
-              <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900">
-                Visi
-              </h3>
-            </div>
-            <p className="text-sm text-slate-600 leading-relaxed font-normal">
-              Menjadi mitra terpercaya dalam perawatan, perbaikan kendaraan komersial dengan mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan.
-            </p>
-          </div>
-
-          {/* Misi */}
-          <div className="bg-white p-6 sm:p-7 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                <Compass className="w-5 h-5 stroke-[2.2]" />
-              </div>
-              <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900">
-                Misi
-              </h3>
-            </div>
-            <p className="text-sm text-slate-600 leading-relaxed font-normal">
-              Memberikan solusi kebutuhan dan perawatan atau perbaikan kendaraan komersial yang sesuai kebutuhan pelanggan dengan mengutamakan kualitas, keandalan, dan pelayanan profesional. Kami terus meningkatkan kompetensi, teknologi dan proses kerja yang terukur, aman, dan bertanggung jawab untuk menghadirkan layanan yang transparan dan terpercaya.
-            </p>
           </div>
         </div>
       </Container>
