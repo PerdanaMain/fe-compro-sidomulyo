@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
+import { Target, Compass } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { MetricStats } from "@/components/ui/metric-stats";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
@@ -11,7 +12,7 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Tentang Kami — Profil & Sejarah Workshop Karoseri",
-  description: "Profil lengkap Sido Mulyo Abadhi Sidoarjo. Pengalaman 12+ tahun spesialis perbaikan bodi truk, pembuatan karoseri custom, dan rekondisi armada komersial.",
+  description: "Profil lengkap Sido Mulyo Abadhi Sidoarjo. Pengalaman 30 tahun spesialis perbaikan bodi truk, pembuatan karoseri custom, dan rekondisi armada komersial.",
   alternates: {
     canonical: "/tentang"
   }
@@ -45,9 +46,12 @@ export default function TentangPage() {
                 Tentang Kami
               </h1>
             </div>
-            <div className="md:col-span-8">
+            <div className="md:col-span-8 space-y-4">
               <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
-                Sido Mulyo Abadhi berdiri di Krian, Sidoarjo, dengan fokus pada perbaikan dan pembuatan bodi kendaraan komersial. Kami menangani berbagai kebutuhan kendaraan yang digunakan untuk mendukung aktivitas operasional sehari-hari, mulai dari truk logistik hingga kendaraan angkutan. Seiring berkembangnya kebutuhan pelanggan, kami terus menjaga kualitas pengerjaan dan ketelitian di setiap kendaraan yang kami tangani.
+                Selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong>, kami telah tumbuh melalui dedikasi dan pengalaman dalam bidang kendaraan komersial. Berawal dari keluarga yang telah lama berkarya dalam dunia perbaikan dan pengerjaan kendaraan komersial, dari pengalaman tersebut menjadi fondasi lahirnya <strong className="text-slate-900 font-semibold">Sido Mulyo Abadhi</strong> pada 2025 untuk menghadirkan layanan <strong className="text-slate-900 font-semibold">Commercial Vehicle Body Repair</strong> yang mengutamakan kualitas, ketelitian, dan keandalan.
+              </p>
+              <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed">
+                Kami percaya bahwa kualitas tidak hanya dibangun dari proses pengerjaan, tetapi juga dari pengalaman, ketelitian komitmen dan semangat untuk terus berkembang, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan kendaraan komersial pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
               </p>
             </div>
           </div>
@@ -58,7 +62,7 @@ export default function TentangPage() {
           </div>
 
           {/* Banner Workshop Image with Centered Overlay Logo */}
-          <div className="max-w-6xl mx-auto relative aspect-[21/9] sm:aspect-[3/1] rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-900 mb-8">
+          <div className="max-w-6xl mx-auto relative aspect-[21/9] sm:aspect-[3/1] rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-900 mb-12">
             <Image
               src="/images/about-workshop.jpg"
               alt="Fasilitas Workshop Sido Mulyo Abadhi"
@@ -78,6 +82,35 @@ export default function TentangPage() {
                   className="object-contain"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Vision & Mission Cards Grid */}
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+            {/* Visi */}
+            <div className="bg-slate-50 p-7 sm:p-8 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
+              <div className="w-12 h-12 rounded-xl bg-[#1e3a8a]/10 text-[#1e3a8a] flex items-center justify-center mb-5 shrink-0">
+                <Target className="w-6 h-6 stroke-[2.2]" />
+              </div>
+              <h3 className="font-heading text-xl font-bold tracking-tight text-slate-900 mb-3 uppercase">
+                Visi
+              </h3>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                Menjadi mitra terpercaya dalam perawatan, perbaikan kendaraan komersial dengan mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan.
+              </p>
+            </div>
+
+            {/* Misi */}
+            <div className="bg-slate-50 p-7 sm:p-8 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-5 shrink-0">
+                <Compass className="w-6 h-6 stroke-[2.2]" />
+              </div>
+              <h3 className="font-heading text-xl font-bold tracking-tight text-slate-900 mb-3 uppercase">
+                Misi
+              </h3>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                Memberikan solusi kebutuhan dan perawatan atau perbaikan kendaraan komersial yang sesuai kebutuhan pelanggan dengan mengutamakan kualitas, keandalan, dan pelayanan profesional. Kami terus meningkatkan kompetensi, teknologi dan proses kerja yang terukur, aman, dan bertanggung jawab untuk menghadirkan layanan yang transparan dan terpercaya.
+              </p>
             </div>
           </div>
         </Container>
