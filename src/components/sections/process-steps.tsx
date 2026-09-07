@@ -12,37 +12,73 @@ const defaultSteps: ProcessStep[] = [
     step: "01",
     title: "Konsultasi",
     description:
-      "Anda menghubungi kami via WhatsApp atau telepon dan menjelaskan kondisi kendaraan atau kebutuhan bodi yang ingin dibuat."
+      "Sampaikan kondisi kendaraan dan kebutuhan pekerjaan kepada tim kami melalui WhatsApp, telepon, atau kunjungan langsung."
   },
   {
     step: "02",
-    title: "Survei",
+    title: "Survei & Pemeriksaan",
     description:
-      "Kami mengecek kondisi kendaraan secara langsung — di lokasi Anda atau di bengkel kami, mana yang lebih memungkinkan."
+      "Kami melakukan survei dan pemeriksaan kondisi kendaraan untuk mengidentifikasi kebutuhan pekerjaan secara menyeluruh."
   },
   {
     step: "03",
-    title: "Penawaran",
+    title: "Estimasi & Penawaran",
     description:
-      "Anda menerima rincian biaya dan estimasi waktu pengerjaan secara tertulis, sebelum memutuskan untuk melanjutkan."
+      "Hasil pemeriksaan menjadi dasar penyusunan ruang lingkup pekerjaan, estimasi biaya, material, dan waktu pengerjaan."
   },
   {
     step: "04",
-    title: "Pengerjaan",
+    title: "Review & Persetujuan",
     description:
-      "Setelah disepakati, pengerjaan dimulai sesuai jadwal yang ditentukan di awal."
+      "Penawaran dibahas bersama customer hingga ruang lingkup, biaya, dan jadwal pekerjaan disepakati."
   },
   {
     step: "05",
-    title: "Quality Control",
+    title: "Persiapan Pekerjaan",
     description:
-      "Setiap bagian kendaraan diperiksa ulang sebelum diserahkan — mulai dari kekuatan struktur, kerapian pengecatan, hingga fungsi kelengkapan."
+      "Setelah persetujuan diterima, kami menyiapkan SPK, material, komponen, serta kebutuhan pengerjaan lainnya."
   },
   {
     step: "06",
+    title: "Proses Pengerjaan",
+    description:
+      "Kendaraan ditangani sesuai layanan yang dipilih, meliputi Body Repair, Karoseri Custom Body, Rekaroseri, atau Reconditioning, dengan tahapan pengerjaan yang disesuaikan dengan kondisi dan kebutuhan kendaraan."
+  },
+  {
+    step: "07",
+    title: "Quality Control",
+    description:
+      "Setiap hasil pekerjaan diperiksa untuk memastikan kualitas, fungsi, kekuatan, kerapian, dan kesesuaiannya dengan ruang lingkup pekerjaan."
+  },
+  {
+    step: "08",
+    title: "Final Inspection",
+    description:
+      "Pemeriksaan akhir dan dokumentasi dilakukan sebelum kendaraan dinyatakan siap diserahterimakan."
+  },
+  {
+    step: "09",
     title: "Serah Terima",
     description:
-      "Kami menyerahkan hasil bersama Anda, menjelaskan apa saja yang dikerjakan, dan kendaraan siap kembali beroperasi."
+      "Kendaraan diserahkan kepada customer disertai penjelasan mengenai hasil dan pekerjaan yang telah dilakukan."
+  },
+  {
+    step: "10",
+    title: "Invoicing & Pelunasan",
+    description:
+      "Dokumen penagihan diselesaikan sesuai dengan pekerjaan dan kesepakatan yang telah dibuat."
+  },
+  {
+    step: "11",
+    title: "After Sales Service",
+    description:
+      "Kami tetap memberikan layanan purna jual untuk memastikan hasil pekerjaan tetap terjaga setelah kendaraan kembali beroperasi."
+  },
+  {
+    step: "12",
+    title: "Case Closed",
+    description:
+      "Proses pengerjaan dan administrasi telah selesai secara penuh, armada siap beroperasi kembali."
   }
 ];
 
@@ -55,7 +91,7 @@ interface ProcessStepsProps {
 
 export function ProcessSteps({
   title = "Alur Pengerjaan",
-  subtitle = "Enam tahap yang kami lalui untuk setiap kendaraan, dari kontak pertama sampai kendaraan kembali ke tangan Anda.",
+  subtitle = "Tahapan terstruktur yang kami lalui untuk setiap kendaraan, dari kontak pertama hingga layanan purna jual.",
   steps = defaultSteps,
   className = "py-16 sm:py-20 bg-white border-t border-slate-200"
 }: ProcessStepsProps) {
@@ -74,8 +110,8 @@ export function ProcessSteps({
           )}
         </div>
 
-        {/* 6 Step Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* 12 Step Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {steps.map((item, idx) => (
             <div
               key={idx}

@@ -3,16 +3,17 @@
 import React, { useState } from "react";
 import { PortfolioCard } from "@/components/ui/portfolio-card";
 import { portfolioData } from "@/data/portfolio";
+import { servicesData } from "@/data/services";
 
 export function PortfolioFilterClient() {
   const [filter, setFilter] = useState("all");
 
   const categories = [
     { id: "all", label: "Semua" },
-    { id: "body-repair", label: "Body Repair" },
-    { id: "karoseri", label: "Custom Body" },
-    { id: "rekondisi", label: "Reconditioning" },
-    { id: "painting", label: "Finishing" }
+    ...servicesData.map((service) => ({
+      id: service.slug,
+      label: service.title
+    }))
   ];
 
   const filteredItems =

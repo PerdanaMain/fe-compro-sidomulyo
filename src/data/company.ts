@@ -13,6 +13,8 @@ export interface CompanyInfo {
   address: string;
   operatingHours: string;
   mapsEmbedUrl: string;
+  vision: string;
+  mission: string;
   socials: {
     instagram: string;
     facebook: string;
@@ -34,6 +36,8 @@ export const companyData: CompanyInfo = {
   address: "Jl. Bypass Krian KM 30, Kec. Krian, Kab. Sidoarjo, Jawa Timur",
   operatingHours: SITE_CONFIG.openingHours,
   mapsEmbedUrl: SITE_CONFIG.mapsEmbedUrl,
+  vision: "Menjadi mitra terpercaya dalam perawatan, perbaikan kendaraan komersial dengan mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan.",
+  mission: "Memberikan solusi kebutuhan dan perawatan atau perbaikan kendaraan komersial yang sesuai kebutuhan pelanggan dengan mengutamakan kualitas, keandalan, dan pelayanan profesional. Kami terus meningkatkan kompetensi, teknologi dan proses kerja yang terukur, aman, dan bertanggung jawab untuk menghadirkan layanan yang transparan dan terpercaya.",
   socials: {
     instagram: "https://www.instagram.com/sidomulyoabadhi",
     facebook: "https://facebook.com/sidomulyoabadhi",

@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import { Target, Compass } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { MetricStats } from "@/components/ui/metric-stats";
+import { VisionMission } from "@/components/sections/vision-mission";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { ProcessSteps } from "@/components/sections/process-steps";
 import { CtaBanner } from "@/components/sections/cta-banner";
@@ -86,33 +86,7 @@ export default function TentangPage() {
           </div>
 
           {/* Vision & Mission Cards Grid */}
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-            {/* Visi */}
-            <div className="bg-slate-50 p-7 sm:p-8 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
-              <div className="w-12 h-12 rounded-xl bg-[#1e3a8a]/10 text-[#1e3a8a] flex items-center justify-center mb-5 shrink-0">
-                <Target className="w-6 h-6 stroke-[2.2]" />
-              </div>
-              <h3 className="font-heading text-xl font-bold tracking-tight text-slate-900 mb-3 uppercase">
-                Visi
-              </h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Menjadi mitra terpercaya dalam perawatan, perbaikan kendaraan komersial dengan mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan.
-              </p>
-            </div>
-
-            {/* Misi */}
-            <div className="bg-slate-50 p-7 sm:p-8 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all flex flex-col justify-start">
-              <div className="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center mb-5 shrink-0">
-                <Compass className="w-6 h-6 stroke-[2.2]" />
-              </div>
-              <h3 className="font-heading text-xl font-bold tracking-tight text-slate-900 mb-3 uppercase">
-                Misi
-              </h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Memberikan solusi kebutuhan dan perawatan atau perbaikan kendaraan komersial yang sesuai kebutuhan pelanggan dengan mengutamakan kualitas, keandalan, dan pelayanan profesional. Kami terus meningkatkan kompetensi, teknologi dan proses kerja yang terukur, aman, dan bertanggung jawab untuk menghadirkan layanan yang transparan dan terpercaya.
-              </p>
-            </div>
-          </div>
+          <VisionMission variant="slate" className="max-w-6xl mx-auto pt-4" />
         </Container>
       </section>
 
