@@ -45,6 +45,11 @@ export function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
           </div>
         </div>
+
+        {/* Vision & Mission Component at Bottom */}
+        <div className="mt-12 pt-8 border-t border-slate-200/80">
+          <VisionMission variant="white" />
+        </div>
       </Container>
     </section>
   );
