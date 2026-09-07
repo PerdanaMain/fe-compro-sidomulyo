@@ -31,20 +31,20 @@ const footerNavItems = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#f4f3ef] text-slate-700 py-12 md:py-16 border-t border-slate-200/60">
+    <footer className="bg-[#f0f4f9] text-slate-700 py-12 md:py-16 border-t border-slate-200/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
-          {/* Column 1: Brand & Address */}
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-12">
+          {/* Column 1: Brand & Address (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-3">
               <Image
                 src="/images/logo-footer.png"
-                height={42}
-                width={42}
+                height={40}
+                width={40}
                 alt={companyData.name}
                 className="object-contain"
               />
-              <span className="font-heading font-extrabold text-xl tracking-tight text-slate-900 uppercase">
+              <span className="font-heading font-extrabold text-lg tracking-tight text-slate-900 uppercase">
                 SIDO MULYO ABADHI
               </span>
             </div>
@@ -59,7 +59,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-8 h-8 rounded-full border border-slate-800/80 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
+                className="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
               >
                 <WhatsAppIcon className="w-4 h-4" />
               </a>
@@ -68,7 +68,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-8 h-8 rounded-full border border-slate-800/80 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
+                className="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -77,15 +77,15 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="w-8 h-8 rounded-full border border-slate-800/80 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
+                className="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-800 hover:bg-slate-900 hover:text-white transition-colors"
               >
                 <TikTokIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-          {/* Column 2: Navigasi */}
-          <div className="space-y-3 md:pl-4">
+          {/* Column 2: Navigasi (lg:col-span-2) */}
+          <div className="lg:col-span-2 space-y-3">
             <h3 className="font-heading font-bold text-base text-slate-900 tracking-wide">
               Navigasi
             </h3>
@@ -103,8 +103,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Jam Operasional */}
-          <div className="space-y-3">
+          {/* Column 3: Jam Operasional (lg:col-span-2) */}
+          <div className="lg:col-span-2 space-y-3">
             <h3 className="font-heading font-bold text-base text-slate-900 tracking-wide">
               Jam Operasional
             </h3>
@@ -114,8 +114,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 4: Kontak */}
-          <div className="space-y-3">
+          {/* Column 4: Kontak (lg:col-span-2) */}
+          <div className="lg:col-span-2 space-y-3">
             <h3 className="font-heading font-bold text-base text-slate-900 tracking-wide">
               Kontak
             </h3>
@@ -123,7 +123,7 @@ export function Footer() {
               <p>
                 <a
                   href={`mailto:${companyData.email}`}
-                  className="hover:text-slate-900 transition-colors"
+                  className="hover:text-slate-900 transition-colors block truncate"
                 >
                   {companyData.email}
                 </a>
@@ -131,17 +131,33 @@ export function Footer() {
               <p>
                 <a
                   href={`tel:${companyData.phone.replace(/[^0-9]/g, "")}`}
-                  className="hover:text-slate-900 transition-colors"
+                  className="hover:text-slate-900 transition-colors block"
                 >
                   {companyData.phone}
                 </a>
               </p>
             </div>
           </div>
+
+          {/* Column 5: Google Maps Embed (lg:col-span-3) */}
+          <div className="lg:col-span-3 sm:col-span-2 lg:col-span-3">
+            <div className="w-full h-44 rounded-lg overflow-hidden border border-slate-200 shadow-xs bg-white relative">
+              <iframe
+                title={`Lokasi ${companyData.name}`}
+                src={companyData.mapsEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Bottom Bar / Copyright */}
-        <div className="pt-8 border-t border-slate-300/60 text-center">
+        <div className="pt-8 border-t border-slate-200 text-center">
           <p className="text-xs text-slate-600 font-normal">
             © {new Date().getFullYear()} Sido Mulyo Abadhi. Seluruh hak cipta dilindungi.
           </p>
