@@ -8,7 +8,7 @@ export const navItems: NavItem[] = [
   { label: "LAYANAN", href: "/layanan" },
   { label: "PORTFOLIO", href: "/portfolio" },
   { label: "TENTANG", href: "/tentang" },
-  { label: "KLIEN", href: "/klien" },
+  { label: "KLIEN & MITRA", href: "/klien" },
   { label: "KONTAK", href: "/kontak" }
 ];
 

@@ -2,7 +2,7 @@
 
 import { companyData } from "@/data/company";
 import { navItems } from "@/data/navigation";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -33,20 +33,20 @@ export function Header() {
             : "bg-gradient-to-b from-slate-950/90 via-slate-950/40 to-transparent"
         } ${scrolled ? "py-3" : "py-4 sm:py-5"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/images/logo.png"
+              src={isWhiteNav ? "/images/logo-footer.png" : "/images/logo.png"}
               height={40}
               width={40}
               alt={companyData.name}
-              className="object-contain"
+              className="object-contain w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
             />
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center justify-center absolute inset-x-0 gap-8">
             {navItems.map((item) => {
               const isActive =
                 item.href === "/"
@@ -71,25 +71,6 @@ export function Header() {
                 </Link>
               );
             })}
-          </div>
-
-          {/* Right Action CTA (Outline WHATSAPP Button) */}
-          <div className="hidden lg:flex items-center">
-            <a
-              href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                "Halo Sido Mulyo Abadhi, saya ingin bertanya mengenai perbaikan armada."
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider rounded transition-all shadow-xs ${
-                isWhiteNav
-                  ? "border border-[#1546a0] text-[#1546a0] hover:bg-[#1546a0] hover:text-white"
-                  : "border border-white/80 hover:border-white bg-black/20 hover:bg-white/10 text-white"
-              }`}
-            >
-              <Phone className="w-3.5 h-3.5 fill-current" />
-              <span>CHAT WHATSAPP</span>
-            </a>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -127,7 +108,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`font-heading text-sm font-bold uppercase tracking-wider py-2 border-b ${
+                    className={`font-heading text-base font-bold uppercase tracking-wider py-2.5 border-b ${
                       isWhiteNav
                         ? isActive
                           ? "text-[#1546a0] font-extrabold border-slate-100"
@@ -141,23 +122,6 @@ export function Header() {
                   </Link>
                 );
               })}
-            </div>
-            <div className="pt-2">
-              <a
-                href={`https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-                  "Halo Sido Mulyo Abadhi, saya ingin berkonsultasi."
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 border text-xs font-bold uppercase tracking-wider rounded ${
-                  isWhiteNav
-                    ? "border-[#1546a0] text-[#1546a0] bg-blue-50/50"
-                    : "border-white/80 text-white bg-white/5"
-                }`}
-              >
-                <Phone className="w-4 h-4 fill-current" />
-                <span>CHAT WHATSAPP</span>
-              </a>
             </div>
           </div>
         )}
