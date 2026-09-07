@@ -1,16 +1,14 @@
 import React from "react";
 import { Metadata } from "next";
-import { MapPin, Phone, Clock, MessageSquare } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, ArrowRight, MessageSquare } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { companyData } from "@/data/company";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Hubungi & Lokasi Workshop Bengkel Karoseri Sidoarjo",
-  description: "Alamat lokasi workshop Sido Mulyo Abadhi Krian Sidoarjo, nomor telepon hotline, WhatsApp, dan jam operasional.",
+  title: "Hubungi Kami — Sido Mulyo Abadhi | Bengkel Karoseri Sidoarjo",
+  description: "Baik untuk konsultasi cepat maupun kebutuhan armada besar, ada beberapa cara menghubungi kami. Pilih yang paling nyaman buat Anda.",
   alternates: {
     canonical: "/kontak"
   }
@@ -27,112 +25,123 @@ export default function KontakPage() {
   )}`;
 
   return (
-    <div className="pt-28 pb-16 bg-slate-50">
+    <div className="pt-28 pb-16 bg-white min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Container>
-        <div className="py-8">
-          <SectionHeading
-            as="h1"
-            eyebrow="LOKASI & AKSES"
-            title="Bengkel Karoseri Krian, Sidoarjo — Lokasi & Kontak Official"
-            subtitle="Kunjungi lokasi bengkel kami di Krian, Sidoarjo atau hubungi tim customer service kami untuk konsultasi dan penawaran harga."
+        {/* Header Title & Subtitle Section */}
+        <div className="pt-4 pb-10 max-w-3xl">
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.1]">
+            Ceritakan Kebutuhan Anda, Kami yang Atur Sisanya
+          </h1>
+          <p className="text-base sm:text-lg text-slate-500 font-normal leading-relaxed mt-6 max-w-xl">
+            Baik untuk konsultasi cepat maupun kebutuhan armada besar, ada beberapa cara menghubungi kami.
+            <br />
+            Pilih yang paling nyaman buat Anda.
+          </p>
+        </div>
+
+        {/* Hero Banner Image */}
+        <div className="w-full relative rounded-xl overflow-hidden shadow-sm mb-12 bg-slate-100 aspect-[16/9] md:aspect-[21/9]">
+          <Image
+            src="/images/contact-hero.jpg"
+            alt="Tim Customer Service Sido Mulyo Abadhi"
+            fill
+            className="object-cover object-center"
+            priority
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
-          {/* Left Column: Contact Cards */}
-          <div className="lg:col-span-5 space-y-6">
-            <Card className="p-6 bg-white border border-slate-200 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-700 shrink-0 mt-1">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg font-bold uppercase text-slate-900">
-                    Alamat Workshop
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed mt-1">
-                    {companyData.address}
-                  </p>
-                </div>
+        {/* 3 Contact Method Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {/* Card 1: WhatsApp */}
+          <div className="bg-white border border-slate-200/90 rounded-xl p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div className="flex items-center gap-3 text-slate-900">
+                <MessageSquare className="w-6 h-6 fill-slate-900 text-slate-900" />
+                <h2 className="font-heading font-extrabold text-xl text-slate-900">
+                  WhatsApp
+                </h2>
               </div>
-            </Card>
-
-            <Card className="p-6 bg-white border border-slate-200 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 shrink-0 mt-1">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg font-bold uppercase text-slate-900">
-                    Telepon & WhatsApp
-                  </h3>
-                  <p className="text-sm text-slate-600 mt-1">
-                    Kantor: <a href={`tel:${companyData.phone}`} className="font-semibold text-slate-900 hover:text-blue-700">{companyData.phone}</a>
-                  </p>
-                  <p className="text-sm text-slate-600">
-                    WhatsApp Hotline: <a href={waUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-emerald-700 hover:underline">+{companyData.whatsapp}</a>
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-white border border-slate-200 space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 shrink-0 mt-1">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-heading text-lg font-bold uppercase text-slate-900">
-                    Jam Operasional
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed mt-1">
-                    {companyData.operatingHours}
-                  </p>
-                  <p className="text-xs text-slate-500 mt-1">
-                    Minggu & Libur Nasional: Tutup (Emergency Call Available)
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            <div className="pt-2">
-              <Button
+              <p className="text-sm text-slate-500 leading-relaxed mt-4 min-h-[40px]">
+                Respon tercepat — biasanya dalam hitungan menit di jam kerja.
+              </p>
+              <p className="font-bold text-slate-900 text-sm mt-4">
+                {companyData.whatsapp.startsWith("62")
+                  ? `0${companyData.whatsapp.slice(2).replace(/(\d{4})(\d{4})(\d+)/, "$1-$2-$3")}`
+                  : companyData.whatsapp}
+              </p>
+            </div>
+            <div className="mt-8 pt-4">
+              <a
                 href={waUrl}
-                external
-                variant="primary"
-                size="lg"
-                className="w-full flex items-center justify-center gap-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-bold text-sm hover:underline group"
               >
-                <MessageSquare className="w-5 h-5" />
-                <span>Hubungi via WhatsApp</span>
-              </Button>
+                <span>Chat Sekarang</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
 
-          {/* Right Column: Google Maps Embed Box */}
-          <div className="lg:col-span-7">
-            <Card className="p-2 bg-white border border-slate-200 h-full min-h-[400px] flex flex-col">
-              <div className="w-full h-full min-h-[380px] rounded overflow-hidden relative bg-slate-200">
-                <iframe
-                  title={`Lokasi ${companyData.name} Krian Sidoarjo`}
-                  src={companyData.mapsEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, minHeight: "380px" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+          {/* Card 2: Telepon */}
+          <div className="bg-white border border-slate-200/90 rounded-xl p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div className="flex items-center gap-3 text-slate-900">
+                <Phone className="w-6 h-6 fill-slate-900 text-slate-900" />
+                <h2 className="font-heading font-extrabold text-xl text-slate-900">
+                  Telepon
+                </h2>
               </div>
-            </Card>
+              <p className="text-sm text-slate-500 leading-relaxed mt-4 min-h-[40px]">
+                Untuk Anda yang lebih suka bicara langsung dengan tim kami.
+              </p>
+              <p className="font-bold text-slate-900 text-sm mt-4">
+                {companyData.phone}
+              </p>
+            </div>
+            <div className="mt-8 pt-4">
+              <a
+                href={`tel:${companyData.phone.replace(/[^0-9]/g, "")}`}
+                className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-bold text-sm hover:underline group"
+              >
+                <span>Hubungi Sekarang</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 3: Email */}
+          <div className="bg-white border border-slate-200/90 rounded-xl p-8 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div className="flex items-center gap-3 text-slate-900">
+                <Mail className="w-6 h-6 fill-slate-900 text-slate-900" />
+                <h2 className="font-heading font-extrabold text-xl text-slate-900">
+                  Email
+                </h2>
+              </div>
+              <p className="text-sm text-slate-500 leading-relaxed mt-4 min-h-[40px]">
+                Untuk kebutuhan yang perlu lampiran dokumen atau foto banyak.
+              </p>
+              <p className="font-bold text-slate-900 text-sm mt-4 truncate">
+                {companyData.email}
+              </p>
+            </div>
+            <div className="mt-8 pt-4">
+              <a
+                href={`mailto:${companyData.email}`}
+                className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800 font-bold text-sm hover:underline group"
+              >
+                <span>Kirim Email</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
           </div>
         </div>
       </Container>
     </div>
   );
 }
-
