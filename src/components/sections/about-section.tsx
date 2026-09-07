@@ -12,7 +12,7 @@ export function AboutSection() {
           {/* Left Column Text */}
           <div className="space-y-6">
             <SectionHeading
-              eyebrow="REPUTASI & PENGALAMAN"
+              eyebrow=""
               title="Tentang Kami"
               align="left"
               className="mb-6"
@@ -23,26 +23,6 @@ export function AboutSection() {
             <p className="text-slate-600 leading-relaxed text-base">
               Kami menggabungkan teknisi berpengalaman, teknologi fabrikasi hidrolik modern, dan standar kontrol kualitas ketat untuk menjamin setiap armada yang keluar dari bengkel kami aman, tangguh, dan estetik di jalanan.
             </p>
-
-            {/* Stat Counters */}
-            <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-200">
-              <div>
-                <div className="font-heading text-4xl sm:text-5xl font-extrabold text-blue-800 tracking-tight">
-                  {companyData.completedUnitsPerYear}+
-                </div>
-                <div className="text-xs uppercase font-bold tracking-wider text-slate-500 mt-1">
-                  Armada Diperbaiki / Tahun
-                </div>
-              </div>
-              <div>
-                <div className="font-heading text-4xl sm:text-5xl font-extrabold text-blue-800 tracking-tight">
-                  {companyData.experienceYears}+
-                </div>
-                <div className="text-xs uppercase font-bold tracking-wider text-slate-500 mt-1">
-                  Tahun Pengalaman Industri
-                </div>
-              </div>
-            </div>
 
             <div className="pt-4 flex items-center gap-4">
               <Button href="/tentang" variant="secondary" size="md">
