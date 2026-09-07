@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { Target, Compass } from "lucide-react";
+import { VisionMission } from "@/components/sections/vision-mission";
 import Image from "next/image";
 
 export function AboutSection() {
   return (
     <section className="py-20 bg-slate-50 border-t border-slate-200">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
           {/* Left Column Text */}
           <div className="space-y-6">
             <SectionHeading
@@ -23,39 +23,6 @@ export function AboutSection() {
             <p className="text-slate-600 leading-relaxed text-base">
               Selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong>, kami telah tumbuh melalui dedikasi dan pengalaman dalam bidang kendaraan komersial. Berawal dari keluarga yang telah lama berkarya dalam dunia perbaikan dan pengerjaan kendaraan komersial, dari pengalaman tersebut menjadi fondasi lahirnya <strong className="text-slate-900 font-semibold">Sido Mulyo Abadhi</strong> pada 2025 untuk menghadirkan layanan <strong className="text-slate-900 font-semibold">Commercial Vehicle Body Repair</strong> yang mengutamakan kualitas, ketelitian, dan keandalan. Kami percaya bahwa kualitas tidak hanya dibangun dari proses pengerjaan, tetapi juga dari pengalaman, ketelitian komitmen dan semangat untuk terus berkembang, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan kendaraan komersial pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
             </p>
-
-            {/* Vision & Mission Inside Left Column */}
-            <div className="space-y-4 pt-2 border-t border-slate-200/80">
-              {/* Visi */}
-              <div className="bg-white p-5 sm:p-6 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg bg-[#1e3a8a]/10 text-[#1e3a8a] flex items-center justify-center shrink-0">
-                    <Target className="w-5 h-5 stroke-[2.2]" />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900">
-                    Visi
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Menjadi mitra terpercaya dalam perawatan, perbaikan kendaraan komersial dengan mengutamakan kualitas, ketepatan waktu, dan kepuasan pelanggan.
-                </p>
-              </div>
-
-              {/* Misi */}
-              <div className="bg-white p-5 sm:p-6 rounded-xl border border-slate-200/90 shadow-xs hover:shadow-md transition-all">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
-                    <Compass className="w-5 h-5 stroke-[2.2]" />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold uppercase tracking-tight text-slate-900">
-                    Misi
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  Memberikan solusi kebutuhan dan perawatan atau perbaikan kendaraan komersial yang sesuai kebutuhan pelanggan dengan mengutamakan kualitas, keandalan, dan pelayanan profesional. Kami terus meningkatkan kompetensi, teknologi dan proses kerja yang terukur, aman, dan bertanggung jawab untuk menghadirkan layanan yang transparan dan terpercaya.
-                </p>
-              </div>
-            </div>
 
             <div className="pt-2 flex items-center gap-4">
               <Button href="/tentang" variant="secondary" size="md">
@@ -77,6 +44,11 @@ export function AboutSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
           </div>
+        </div>
+
+        {/* Vision & Mission */}
+        <div className="pt-6 border-t border-slate-200/80">
+          <VisionMission />
         </div>
       </Container>
     </section>
