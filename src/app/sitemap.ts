@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { SITE_CONFIG } from "@/lib/config";
 import { servicesData } from "@/data/services";
+import { portfolioData } from "@/data/portfolio";
 
 export const dynamic = "force-static";
 
@@ -29,7 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7
   }));
 
-  return [...staticPages, ...servicePages];
+  const portfolioPages = portfolioData.map((item) => ({
+    url: `${baseUrl}/portfolio/${item.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7
+  }));
+
+  return [...staticPages, ...servicePages, ...portfolioPages];
 }
 
 
