@@ -53,22 +53,12 @@ export function ServiceDetailCard({
           {service.number} — {service.title}
         </h2>
 
-        {/* Full Description */}
-        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-          {service.fullDescription}
+        {/* Description */}
+        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3">
+          {service.description}
         </p>
 
-        {/* Highlight Card / Catatan */}
-        {service.highlightText && (
-          <div className="bg-[#f0f5ff] border border-blue-100 rounded-md p-3.5 sm:p-4 text-xs sm:text-sm">
-            <div className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-1">
-              Deskripsi Tambahan
-            </div>
-            <p className="text-slate-700 leading-relaxed">
-              {service.highlightText}
-            </p>
-          </div>
-        )}
+
 
         {/* Checklist Section */}
         {service.features && service.features.length > 0 && (

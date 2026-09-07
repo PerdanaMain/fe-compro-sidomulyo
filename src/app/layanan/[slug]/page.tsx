@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${service.title} — Bengkel Karoseri Sidoarjo`,
-    description: service.shortDescription,
+    description: service.description,
     alternates: {
       canonical: `/layanan/${service.slug}`
     }
@@ -101,7 +101,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               </h1>
 
               <p className="text-lg text-slate-700 leading-relaxed font-normal mb-6">
-                {service.fullDescription}
+                {service.description}
               </p>
 
               <div className="border-t border-slate-200 pt-6 space-y-4">
@@ -114,7 +114,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                       key={i}
                       className="p-4 rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-3"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-[#1546a0] shrink-0 mt-0.5" />
                       <span className="text-sm font-medium text-slate-800">{feat}</span>
                     </div>
                   ))}

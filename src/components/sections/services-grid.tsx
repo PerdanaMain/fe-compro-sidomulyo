@@ -13,9 +13,9 @@ export function ServicesGrid() {
     <section className="py-20 bg-white">
       <Container>
         <SectionHeading
-          eyebrow="SPESIALISASI KAMI"
+          eyebrow={""}
           title="Layanan Kami"
-          subtitle="Berbagai opsi perbaikan bodi, fabrikasi karoseri custom, hingga perawatan eksterior untuk armada kendaraan komersial Anda."
+          subtitle="Beragam layanan kami hadir sebagai solusi menyeluruh untuk mengembalikan, memperbarui, dan membangun kembali kendaraan komersial sesuai kebutuhan operasional Anda"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -35,8 +35,8 @@ export function ServicesGrid() {
                   <h3 className="font-heading text-xl font-extrabold uppercase tracking-tight text-slate-900 group-hover:text-blue-700 transition-colors mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed mb-4">
-                    {service.shortDescription}
+                  <p className="text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                    {service.description}
                   </p>
                 </div>
                 <Link

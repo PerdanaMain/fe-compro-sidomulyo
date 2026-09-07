@@ -31,7 +31,7 @@ export default function PortfolioPage() {
         <Container>
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-wide">
-              Hasil Pekerjaan Kami
+              Portfolio Kami
             </h1>
             <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
               Sebagian proyek perbaikan dan pembuatan bodi kendaraan yang telah kami selesaikan.

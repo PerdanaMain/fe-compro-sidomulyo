@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { PortfolioItem } from "@/data/portfolio";
 
 interface PortfolioCardProps {
@@ -9,8 +10,9 @@ interface PortfolioCardProps {
 
 export function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
   return (
-    <div
-      className={`bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200/80 flex flex-col group hover:shadow-md transition-shadow ${className}`}
+    <Link
+      href={`/portfolio/${item.slug}`}
+      className={`bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200/80 flex flex-col group hover:shadow-md transition-all ${className}`}
     >
       <div className="relative aspect-[4/3] w-full bg-slate-900 overflow-hidden">
         <Image
@@ -26,11 +28,11 @@ export function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
           <span className="inline-block bg-[#fbbd08] text-slate-900 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded tracking-wider mb-2">
             {item.category}
           </span>
-          <h3 className="font-heading font-bold text-sm sm:text-base text-slate-900 line-clamp-1">
+          <h3 className="font-heading font-bold text-sm sm:text-base text-slate-900 line-clamp-1 group-hover:text-blue-800 transition-colors">
             {item.title}
           </h3>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

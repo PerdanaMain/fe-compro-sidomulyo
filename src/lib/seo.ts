@@ -80,7 +80,7 @@ export function generateServiceSchema(service: ServiceItem) {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": service.title,
-    "description": service.fullDescription,
+    "description": service.description,
     "provider": {
       "@type": "AutoBodyShop",
       "name": SITE_CONFIG.name,

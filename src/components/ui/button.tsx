@@ -34,7 +34,7 @@ export function Button({
     primary: "bg-amber-500 text-slate-950 hover:bg-amber-400 active:bg-amber-600 shadow-md border border-amber-400/50",
     secondary: "bg-blue-800 text-white hover:bg-blue-700 active:bg-blue-900 shadow-md border border-blue-700/50",
     outline: "bg-transparent text-white border-2 border-white/80 hover:bg-white/10 hover:border-white",
-    whatsapp: "bg-emerald-600 text-white hover:bg-emerald-500 shadow-lg border border-emerald-500/50"
+    whatsapp: "bg-[#1546a0] text-white hover:bg-blue-800 shadow-lg border border-blue-600/50"
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

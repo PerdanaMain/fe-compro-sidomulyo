@@ -15,12 +15,12 @@ interface PortfolioGridProps {
 }
 
 export function PortfolioGrid({
-  title = "Hasil Pekerjaan Kami",
+  title = "Portfolio Kami",
   subtitle = "Temukan berbagai portofolio hasil pengerjaan karoseri dan perbaikan armada terbaik kami.",
   limit = 3,
   align = "center",
   buttonText = "Lihat Semua Portofolio",
-  href = "/portofolio",
+  href = "/portfolio",
   className = "py-16 sm:py-20 bg-[#f4f7fc] border-t border-slate-200"
 }: PortfolioGridProps) {
   const displayItems = portfolioData.slice(0, limit);
@@ -30,9 +30,8 @@ export function PortfolioGrid({
       <Container>
         {/* Header Section */}
         <div
-          className={`max-w-3xl mb-10 space-y-2 ${
-            align === "center" ? "mx-auto text-center" : "text-left"
-          }`}
+          className={`max-w-3xl mb-10 space-y-2 ${align === "center" ? "mx-auto text-center" : "text-left"
+            }`}
         >
           <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-wide">
             {title}
