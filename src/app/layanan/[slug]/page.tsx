@@ -114,7 +114,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                       key={i}
                       className="p-4 rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-3"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-[#1546a0] shrink-0 mt-0.5" />
                       <span className="text-sm font-medium text-slate-800">{feat}</span>
                     </div>
                   ))}
