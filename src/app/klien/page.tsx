@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { clientsData } from "@/data/clients";
 import { companyData } from "@/data/company";
 import { generateBreadcrumbSchema } from "@/lib/seo";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Klien & Pelanggan Perusahaan Armada",
@@ -20,9 +21,9 @@ export default function KlienPage() {
     { name: "Klien", item: "/klien" }
   ]);
 
-  const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Mulyo Abadhi, kami berminat untuk bekerja sama / konsultasi perbaikan armada."
-  )}`;
+  const waUrl = getWhatsAppUrl(
+    "Halo Sidomulyo Abadhi, kami berminat untuk bekerja sama / konsultasi perbaikan armada."
+  );
 
   return (
     <div className="bg-white">

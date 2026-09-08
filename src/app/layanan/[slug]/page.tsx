@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { servicesData } from "@/data/services";
 import { companyData } from "@/data/company";
 import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/seo";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -55,9 +56,9 @@ export default async function ServiceDetailPage({ params }: Props) {
     { name: service.title, item: `/layanan/${service.slug}` }
   ]);
 
-  const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    `Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai layanan ${service.title}.`
-  )}`;
+  const waUrl = getWhatsAppUrl(
+    `Halo Sidomulyo Abadhi, saya ingin konsultasi mengenai layanan ${service.title}.`
+  );
 
   return (
     <div className="pt-28 pb-16 bg-slate-50">

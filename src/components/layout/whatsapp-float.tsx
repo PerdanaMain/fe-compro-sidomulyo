@@ -2,12 +2,12 @@
 
 import React from "react";
 import { MessageCircle } from "lucide-react";
-import { companyData } from "@/data/company";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function WhatsAppFloat() {
-  const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai armada saya."
-  )}`;
+  const waUrl = getWhatsAppUrl(
+    "Halo Sidomulyo Abadhi, saya ingin konsultasi mengenai armada saya."
+  );
 
   return (
     <a

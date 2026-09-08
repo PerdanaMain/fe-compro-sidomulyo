@@ -25,8 +25,8 @@ export interface CompanyInfo {
 
 export const companyData: CompanyInfo = {
   name: SITE_CONFIG.name,
-  shortName: "Sido Mulyo Abadhi",
-  tagline: "Commercial Car Body Repair & Karoseri Specialist",
+  shortName: "Sidomulyo Abadhi",
+  tagline: "Commercial Vehicle Body Repair & Karoseri Specialist",
   experienceYears: 12,
   completedUnitsPerYear: 500,
   satisfactionRate: 98,

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@/components/ui/container";
-import { companyData } from "@/data/company";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 interface CtaBannerProps {
   title?: string;
@@ -13,9 +13,9 @@ export function CtaBanner({
   title = "Kebutuhan Armada? Serahkan Pada Ahlinya",
   subtitle = "Karoseri dan body repair yang dikerjakan dengan pengalaman, ketelitian, dan komitmen",
   buttonText = "Chat via WhatsApp",
-  message = "Halo Sido Mulyo Abadhi, saya berminat konsultasi perbaikan/pembuatan bodi armada."
+  message = "Halo Sidomulyo Abadhi, saya berminat konsultasi perbaikan/pembuatan bodi armada."
 }: CtaBannerProps) {
-  const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(message)}`;
+  const waUrl = getWhatsAppUrl(message);
 
   return (
     <section className="py-12 sm:py-16 bg-white">

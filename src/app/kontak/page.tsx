@@ -5,6 +5,7 @@ import { Phone, Mail, ArrowRight, MessageSquare } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { companyData } from "@/data/company";
 import { generateBreadcrumbSchema } from "@/lib/seo";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Hubungi Kami — Sido Mulyo Abadhi | Bengkel Karoseri Sidoarjo",
@@ -20,9 +21,7 @@ export default function KontakPage() {
     { name: "Kontak", item: "/kontak" }
   ]);
 
-  const waUrl = `https://wa.me/${companyData.whatsapp}?text=${encodeURIComponent(
-    "Halo Sido Mulyo Abadhi, saya ingin bertanya info lokasi / konsultasi perbaikan armada."
-  )}`;
+  const waUrl = getWhatsAppUrl();
 
   return (
     <div className="pt-28 pb-16 bg-white min-h-screen">
