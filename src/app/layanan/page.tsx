@@ -10,7 +10,7 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Layanan Karoseri & Commercial Body Repair",
-  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi kabin, dan pengecatan oven di Sidoarjo dari Sido Mulyo Abadhi.",
+  description: "Daftar lengkap layanan spesialis perbaikan bodi truk, karoseri custom, rekondisi kabin, dan pengecatan oven di Sidoarjo dari Sidomulyo Abadhi.",
   alternates: {
     canonical: "/layanan"
   }

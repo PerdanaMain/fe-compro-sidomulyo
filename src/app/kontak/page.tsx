@@ -8,7 +8,7 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Hubungi Kami — Sido Mulyo Abadhi | Bengkel Karoseri Sidoarjo",
+  title: "Hubungi Kami — Sidomulyo Abadhi | Bengkel Karoseri Sidoarjo",
   description: "Baik untuk konsultasi cepat maupun kebutuhan armada besar, ada beberapa cara menghubungi kami. Pilih yang paling nyaman buat Anda.",
   alternates: {
     canonical: "/kontak"
@@ -46,7 +46,7 @@ export default function KontakPage() {
         <div className="w-full relative rounded-xl overflow-hidden shadow-sm mb-12 bg-slate-100 aspect-[16/9] md:aspect-[21/9]">
           <Image
             src="/images/contact-hero.jpg"
-            alt="Tim Customer Service Sido Mulyo Abadhi"
+            alt="Tim Customer Service Sidomulyo Abadhi"
             fill
             className="object-cover object-center"
             priority

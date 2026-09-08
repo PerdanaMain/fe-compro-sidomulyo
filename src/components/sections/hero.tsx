@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 const heroImages = [
-  { src: "/images/hero-bg.png", alt: "Karoseri dan Body Repair Sido Mulyo Abadhi" },
-  { src: "/images/hero-bg-2.png", alt: "Karoseri Custom Sido Mulyo Abadhi" },
-  { src: "/images/hero-bg-3.jpg", alt: "Rekondisi Truk Sido Mulyo Abadhi" },
-  { src: "/images/hero-bg-4.png", alt: "Cat Oven dan Finishing Sido Mulyo Abadhi" },
+  { src: "/images/hero-bg.png", alt: "Karoseri dan Body Repair Sidomulyo Abadhi" },
+  { src: "/images/hero-bg-2.png", alt: "Karoseri Custom Sidomulyo Abadhi" },
+  { src: "/images/hero-bg-3.jpg", alt: "Rekondisi Truk Sidomulyo Abadhi" },
+  { src: "/images/hero-bg-4.png", alt: "Cat Oven dan Finishing Sidomulyo Abadhi" },
 ];
 
 export function Hero() {

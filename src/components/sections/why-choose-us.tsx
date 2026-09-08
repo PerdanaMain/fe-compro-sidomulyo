@@ -102,7 +102,7 @@ export function WhyChooseUs({
               >
                 <Image
                   src={imgSrc}
-                  alt={`Workshop Sido Mulyo Abadhi ${idx + 1}`}
+                  alt={`Workshop Sidomulyo Abadhi ${idx + 1}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center"

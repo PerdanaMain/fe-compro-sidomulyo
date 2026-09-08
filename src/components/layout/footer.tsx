@@ -46,7 +46,7 @@ export function Footer() {
                 className="object-contain"
               />
               <span className="font-heading font-extrabold text-lg tracking-tight text-slate-900 uppercase">
-                SIDO MULYO ABADHI
+                SIDOMULYO ABADHI
               </span>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
@@ -160,7 +160,7 @@ export function Footer() {
         {/* Bottom Bar / Copyright */}
         <div className="pt-8 border-t border-slate-200 text-center">
           <p className="text-xs text-slate-600 font-normal">
-            © {new Date().getFullYear()} Sido Mulyo Abadhi. Seluruh hak cipta dilindungi.
+            © {new Date().getFullYear()} Sidomulyo Abadhi. Seluruh hak cipta dilindungi.
           </p>
         </div>
       </div>

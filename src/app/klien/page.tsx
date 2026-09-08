@@ -9,7 +9,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Klien & Pelanggan Perusahaan Armada",
-  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan dan pembuatan bodi armada kepada Sido Mulyo Abadhi.",
+  description: "Perusahaan ekspedisi, manufaktur, dan logistik yang memercayakan perawatan dan pembuatan bodi armada kepada Sidomulyo Abadhi.",
   alternates: {
     canonical: "/klien"
   }
@@ -41,7 +41,7 @@ export default function KlienPage() {
               Mitra Terbaik
             </h1>
             <p className="text-sm sm:text-base text-slate-600 max-w-2xl leading-relaxed font-normal">
-              Sido Mulyo Abadhi bekerja sama dengan operator armada, pemasok material, dan mitra asuransi untuk memastikan setiap pengerjaan selesai dengan standar yang bisa dipertanggungjawabkan.
+              Sidomulyo Abadhi bekerja sama dengan operator armada, pemasok material, dan mitra asuransi untuk memastikan setiap pengerjaan selesai dengan standar yang bisa dipertanggungjawabkan.
             </p>
 
             {/* Banner Image */}
