@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <section className="py-20 bg-slate-50 border-t border-slate-200">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column Text */}
           <div className="space-y-6">
             <SectionHeading
@@ -18,10 +18,10 @@ export function AboutSection() {
               className="mb-6"
             />
             <p className="text-slate-600 leading-relaxed text-base">
-              30 Years of Experience <strong className="text-slate-900 font-semibold">Sido Mulyo Abadhi</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
+              30 Years of Experience <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
             </p>
             <p className="text-slate-600 leading-relaxed text-base">
-              Selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong>, kami telah tumbuh melalui dedikasi dan pengalaman dalam bidang kendaraan komersial. Berawal dari keluarga yang telah lama berkarya dalam dunia perbaikan dan pengerjaan kendaraan komersial, dari pengalaman tersebut menjadi fondasi lahirnya <strong className="text-slate-900 font-semibold">Sido Mulyo Abadhi</strong> pada 2025 untuk menghadirkan layanan <strong className="text-slate-900 font-semibold">Commercial Vehicle Body Repair</strong> yang mengutamakan kualitas, ketelitian, dan keandalan. Kami percaya bahwa kualitas tidak hanya dibangun dari proses pengerjaan, tetapi juga dari pengalaman, ketelitian komitmen dan semangat untuk terus berkembang, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan kendaraan komersial pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
+              Selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong>, kami telah tumbuh melalui dedikasi dan pengalaman dalam bidang kendaraan komersial. Berawal dari keluarga yang telah lama berkarya dalam dunia perbaikan dan pengerjaan kendaraan komersial, dari pengalaman tersebut menjadi fondasi lahirnya <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> pada 2025 untuk menghadirkan layanan <strong className="text-slate-900 font-semibold">Commercial Vehicle Body Repair</strong> yang mengutamakan kualitas, ketelitian, dan keandalan. Kami percaya bahwa kualitas tidak hanya dibangun dari proses pengerjaan, tetapi juga dari pengalaman, ketelitian komitmen dan semangat untuk terus berkembang, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan kendaraan komersial pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
             </p>
 
             <div className="pt-2 flex items-center gap-4">
@@ -35,10 +35,10 @@ export function AboutSection() {
           </div>
 
           {/* Right Column Image */}
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3] lg:sticky lg:top-28">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3]">
             <Image
               src="/images/about-bg.png"
-              alt="Fasilitas Workshop Karoseri Truk Sido Mulyo Abadhi Krian Sidoarjo"
+              alt="Fasilitas Workshop Karoseri Truk Sidomulyo Abadhi Krian Sidoarjo"
               fill
               className="object-cover object-center"
             />
@@ -46,9 +46,9 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Vision & Mission */}
-        <div className="pt-6 border-t border-slate-200/80">
-          <VisionMission />
+        {/* Vision & Mission Component at Bottom */}
+        <div className="mt-12 pt-8 border-t border-slate-200/80">
+          <VisionMission variant="white" />
         </div>
       </Container>
     </section>

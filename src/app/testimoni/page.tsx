@@ -10,7 +10,7 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Testimoni Klien & Pelanggan",
-  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sido Mulyo Abadhi.",
+  description: "Ulasan dan kebanggaan klien perusahaan armada logistik terhadap hasil pengerjaan bodi truk & karoseri Sidomulyo Abadhi.",
   alternates: {
     canonical: "/testimoni"
   }

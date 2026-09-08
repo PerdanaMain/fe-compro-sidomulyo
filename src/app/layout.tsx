@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     canonical: "./"
   },
   title: {
-    default: `${SITE_CONFIG.name} | Commercial Vehicle Body Repair & Karoseri Sidoarjo`,
+    default: `${SITE_CONFIG.name} | Commercial Vehicle Body & Karoseri Sidoarjo`,
     template: `%s | ${SITE_CONFIG.name}`
   },
   description: SITE_CONFIG.description,
   keywords: [
     "karoseri sidoarjo",
     "bengkel truk sidoarjo",
-    "commercial vehicle body repair",
+    "commercial vehicle body",
     "perbaikan bodi truk",
     "rekondisi kabin truk",
     "wingbox sidoarjo",

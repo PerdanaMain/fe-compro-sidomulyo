@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { MapPin, Check, Shield, Clock, LucideIcon } from "lucide-react";
+import { Award, ShieldCheck, FileText, Clock, LucideIcon } from "lucide-react";
 import { Container } from "@/components/ui/container";
 
 export interface ReasonItem {
@@ -11,28 +11,28 @@ export interface ReasonItem {
 
 const defaultReasons: ReasonItem[] = [
   {
-    icon: MapPin,
-    title: "Pengalaman Menangani Kendaraan Komersial",
+    icon: Award,
+    title: "Pengalaman",
     description:
-      "Truk dan bus bukan mobil pribadi — beban dan tuntutan kerjanya berbeda, ketika kendaraan berhenti, operasional bisnis ikut terdampak."
+      "Berpengalaman menangani berbagai kebutuhan perbaikan kendaraan komersial dan armada operasional."
   },
   {
-    icon: Check,
+    icon: ShieldCheck,
     title: "Garansi Pengerjaan",
     description:
-      "Setiap pengerjaan bodi kami disertai garansi. Jika ada yang perlu diperbaiki, kami yang bertanggung jawab."
+      "Setiap pekerjaan kami kerjakan dengan standar kualitas yang terukur dan didukung garansi sesuai dengan ketentuan yang berlaku."
   },
   {
-    icon: Shield,
-    title: "Estimasi Transparan Sejak Awal",
+    icon: FileText,
+    title: "Harga Transparan",
     description:
-      "Rincian biaya dan waktu pengerjaan diberikan secara tertulis sebelum pekerjaan dimulai."
+      "Penawaran disampaikan secara rinci dan transparan sebelum pekerjaan dimulai."
   },
   {
     icon: Clock,
-    title: "Jadwal yang Kami Pegang",
+    title: "Tepat Waktu",
     description:
-      "Kendaraan berhenti, bisnis ikut menunggu. Karena itu, jadwal yang disepakati menjadi komitmen utama pengerjaan."
+      "Pengerjaan mengikuti jadwal yang telah disepakati untuk membantu menjaga armada siap beroperasi."
   }
 ];
 
@@ -102,7 +102,7 @@ export function WhyChooseUs({
               >
                 <Image
                   src={imgSrc}
-                  alt={`Workshop Sido Mulyo Abadhi ${idx + 1}`}
+                  alt={`Workshop Sidomulyo Abadhi ${idx + 1}`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center"

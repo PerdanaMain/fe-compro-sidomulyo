@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
 import { companyData } from "@/data/company";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 function WhatsAppIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -45,7 +46,7 @@ export function Footer() {
                 className="object-contain"
               />
               <span className="font-heading font-extrabold text-lg tracking-tight text-slate-900 uppercase">
-                SIDO MULYO ABADHI
+                SIDOMULYO ABADHI
               </span>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
@@ -55,7 +56,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2.5 pt-1">
               <a
-                href={`https://wa.me/${companyData.whatsapp}`}
+                href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -159,7 +160,7 @@ export function Footer() {
         {/* Bottom Bar / Copyright */}
         <div className="pt-8 border-t border-slate-200 text-center">
           <p className="text-xs text-slate-600 font-normal">
-            © {new Date().getFullYear()} Sido Mulyo Abadhi. Seluruh hak cipta dilindungi.
+            © {new Date().getFullYear()} Sidomulyo Abadhi. Seluruh hak cipta dilindungi.
           </p>
         </div>
       </div>

@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${project.title} — Portofolio Sido Mulyo Abadhi`,
+    title: `${project.title} — Portofolio Sidomulyo Abadhi`,
     description: project.description || `Hasil pengerjaan karoseri dan body repair ${project.title} oleh Sidomulyo Abadhi Sidoarjo.`,
     alternates: {
       canonical: `/portfolio/${project.slug}`,

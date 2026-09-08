@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { ServiceItem } from "@/data/services";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export interface ServiceDetailCardProps {
   service: ServiceItem;
@@ -13,13 +14,12 @@ export interface ServiceDetailCardProps {
 export function ServiceDetailCard({
   service,
   index,
-  isLast = false,
-  whatsappNumber
+  isLast = false
 }: ServiceDetailCardProps) {
   const isEven = index % 2 === 1;
-  const waServiceUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    `Halo Sido Mulyo Abadhi, saya berminat konsultasi mengenai layanan ${service.title}.`
-  )}`;
+  const waServiceUrl = getWhatsAppUrl(
+    `Halo Sidomulyo Abadhi, saya berminat konsultasi mengenai layanan ${service.title}.`
+  );
 
   return (
     <div
@@ -35,7 +35,7 @@ export function ServiceDetailCard({
       >
         <Image
           src={service.image}
-          alt={`${service.title} — Sido Mulyo Abadhi`}
+          alt={`${service.title} — Sidomulyo Abadhi`}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover object-center"

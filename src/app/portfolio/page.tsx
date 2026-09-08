@@ -7,7 +7,7 @@ import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Hasil Pekerjaan & Portofolio Karoseri",
-  description: "Dokumentasi hasil pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom Sido Mulyo Abadhi di Sidoarjo.",
+  description: "Dokumentasi hasil pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom Sidomulyo Abadhi di Sidoarjo.",
   alternates: {
     canonical: "/portfolio"
   }
@@ -52,7 +52,7 @@ export default function PortfolioPage() {
         title="Punya Kebutuhan Serupa?"
         subtitle="Ceritakan kondisi dan kebutuhan kendaraan Anda. Tim kami siap membantu menemukan solusi yang tepat."
         buttonText="Konsultasi via WhatsApp"
-        message="Halo Sido Mulyo Abadhi, saya ingin konsultasi mengenai kebutuhan armada kendaraan saya."
+        message="Halo Sidomulyo Abadhi, saya ingin konsultasi mengenai kebutuhan armada kendaraan saya."
       />
     </div>
   );
