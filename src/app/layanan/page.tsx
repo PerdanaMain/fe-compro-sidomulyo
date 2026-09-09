@@ -67,7 +67,7 @@ export default function LayananPage() {
         limit={3}
         align="center"
         buttonText="Lihat Semua Portofolio"
-        href="/portofolio"
+        href="/portfolio"
       />
 
       {/* Call To Action (CTA) Banner Section */}
