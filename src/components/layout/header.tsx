@@ -34,19 +34,26 @@ export function Header() {
         } ${scrolled ? "py-3" : "py-4 sm:py-5"}`}
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          {/* Logo & Title */}
+          <Link href="/" className="flex items-center gap-3 group z-10">
             <Image
               src="/images/logo-web.png"
-              height={40}
-              width={40}
+              height={56}
+              width={56}
               alt={companyData.name}
-              className="object-contain w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+              className="object-contain w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
             />
+            <span
+              className={`font-heading font-extrabold text-base sm:text-lg md:text-xl tracking-tight uppercase transition-colors ${
+                isWhiteNav ? "text-slate-900" : "text-white"
+              }`}
+            >
+              SIDOMULYO ABADHI
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center justify-center absolute inset-x-0 gap-8">
+          <div className="hidden lg:flex items-center justify-center absolute inset-x-0 gap-8">
             {navItems.map((item) => {
               const isActive =
                 item.href === "/"
@@ -57,7 +64,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-heading text-xs font-bold uppercase tracking-widest transition-all relative py-1.5 ${
+                  className={`font-heading text-sm font-bold uppercase tracking-wider transition-all relative py-1.5 ${
                     isWhiteNav
                       ? isActive
                         ? "text-[#1546a0] border-b-2 border-[#1546a0]"
@@ -76,7 +83,7 @@ export function Header() {
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className={`md:hidden p-2 focus:outline-none ${
+            className={`lg:hidden p-2 focus:outline-none z-10 ${
               isWhiteNav
                 ? "text-slate-700 hover:text-slate-900"
                 : "text-slate-200 hover:text-white"
@@ -90,7 +97,7 @@ export function Header() {
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div
-            className={`md:hidden border-b px-4 pt-4 pb-6 space-y-4 shadow-xl ${
+            className={`lg:hidden border-b px-4 pt-4 pb-6 space-y-4 shadow-xl ${
               isWhiteNav
                 ? "bg-white border-slate-200"
                 : "bg-slate-950 border-slate-800"
