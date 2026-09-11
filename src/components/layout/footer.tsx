@@ -39,7 +39,7 @@ export function Footer() {
           <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/logo-footer.png"
+                src="/images/logo-web.png"
                 height={40}
                 width={40}
                 alt={companyData.name}

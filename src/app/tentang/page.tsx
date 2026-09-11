@@ -75,7 +75,7 @@ export default function TentangPage() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-slate-950/80 border-2 border-white/80 p-3 sm:p-4 flex items-center justify-center shadow-2xl backdrop-blur-sm">
                 <Image
-                  src="/images/logo-footer.png"
+                  src="/images/logo-web.png"
                   alt="Sidomulyo Abadhi Logo"
                   width={110}
                   height={110}
