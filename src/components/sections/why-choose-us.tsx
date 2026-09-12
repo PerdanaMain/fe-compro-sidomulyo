@@ -14,7 +14,7 @@ const defaultReasons: ReasonItem[] = [
     icon: Award,
     title: "Pengalaman",
     description:
-      "Berpengalaman menangani berbagai kebutuhan perbaikan kendaraan komersial dan armada operasional."
+      "Berbekal pengalaman dalam menangani berbagai kebutuhan kendaraan komersial dengan standar pengerjaan yang mengutamakan ketepatan pengerjaan, standar kualitas tinggi dan hasil akhir yang optimal."
   },
   {
     icon: ShieldCheck,

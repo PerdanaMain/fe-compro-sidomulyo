@@ -7,7 +7,7 @@ export function ValueProps() {
     {
       icon: <Shield className="w-6 h-6 stroke-[2.2]" />,
       title: "Pengalaman",
-      desc: "Berpengalaman menangani berbagai kebutuhan perbaikan kendaraan komersial dan armada operasional.",
+      desc: "Berbekal pengalaman dalam menangani berbagai kebutuhan kendaraan komersial dengan standar pengerjaan yang mengutamakan ketepatan pengerjaan, standar kualitas tinggi dan hasil akhir yang optimal.",
     },
     {
       icon: <Check className="w-6 h-6 stroke-[2.5]" />,
