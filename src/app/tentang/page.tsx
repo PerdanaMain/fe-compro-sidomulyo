@@ -74,30 +74,6 @@ export default function TentangPage() {
           </div>
 
 
-          {/* Banner Workshop Image with Centered Overlay Logo */}
-          <div className="max-w-6xl mx-auto relative aspect-[21/9] sm:aspect-[3/1] rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-900 mb-12">
-            <Image
-              src="/images/about-workshop.jpg"
-              alt="Fasilitas Workshop Sidomulyo Abadhi"
-              fill
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              priority
-              className="object-cover object-center brightness-75"
-            />
-            {/* Centered Circular Logo Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-slate-950/80 border-2 border-white/80 p-3 sm:p-4 flex items-center justify-center shadow-2xl backdrop-blur-sm">
-                <Image
-                  src="/images/logo-web.png"
-                  alt="Sidomulyo Abadhi Logo"
-                  width={110}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Vision & Mission Cards Grid */}
           <VisionMission variant="slate" className="max-w-6xl mx-auto pt-4" />
         </Container>
