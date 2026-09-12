@@ -18,10 +18,13 @@ export function AboutSection() {
               className="mb-6"
             />
             <p className="text-slate-600 leading-relaxed text-base">
-              30 Years of Experience <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> telah menjadi bengkel spesialis pilihan bagi puluhan perusahaan armada logistik, manufaktur, dan transportasi di Jawa Timur.
+              <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> lahir dari perjalanan keluarga kami selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong> di bidang kendaraan komersial. Berawal dari pengalaman bapak tercinta kami, <strong className="text-slate-900 font-semibold">Bapak Abdul Manap</strong>, dalam berbagai pekerjaan perbaikan dan pengerjaan kendaraan komersial, perjalanan tersebut kemudian diiringi bersama kakak kami tersayang, <strong className="text-slate-900 font-semibold">Achmad Rodhi</strong>, yang turut mendampingi dan mempelajari bidang ini secara langsung.
             </p>
             <p className="text-slate-600 leading-relaxed text-base">
-              Selama lebih dari <strong className="text-slate-900 font-semibold">30 tahun</strong>, kami telah tumbuh melalui dedikasi dan pengalaman dalam bidang kendaraan komersial. Berawal dari keluarga yang telah lama berkarya dalam dunia perbaikan dan pengerjaan kendaraan komersial, dari pengalaman tersebut menjadi fondasi lahirnya <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> pada 2025 untuk menghadirkan layanan <strong className="text-slate-900 font-semibold">Commercial Vehicle Body Repair</strong> yang mengutamakan kualitas, ketelitian, dan keandalan. Kami percaya bahwa kualitas tidak hanya dibangun dari proses pengerjaan, tetapi juga dari pengalaman, ketelitian komitmen dan semangat untuk terus berkembang, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan kendaraan komersial pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
+              Berbekal pengalaman yang dibangun serta semangat dan keberanian untuk melangkah bersama, lahirlah <strong className="text-slate-900 font-semibold">Sidomulyo Abadhi</strong> yang berdiri pada tahun 2025, untuk menghadirkan berbagai layanan kendaraan komersial, mulai dari Body Repair, Karoseri Custom Body, Rekaroseri hingga layanan lainnya. Dengan mengutamakan ketelitian dan kualitas, kami terus membawa pengalaman keluarga menjadi langkah untuk berkembang dan memberikan solusi bagi kebutuhan kendaraan komersial.
+            </p>
+            <p className="text-slate-600 leading-relaxed text-base">
+              Bagi kami, kualitas dibangun melalui pengalaman, ketelitian, komitmen, dan semangat untuk terus berkembang. Karena itu, kami berkomitmen menjadi mitra terpercaya bagi kebutuhan armada pelanggan hari ini dan untuk perjalanan yang lebih panjang ke depan.
             </p>
 
             <div className="pt-2 flex items-center gap-4">
