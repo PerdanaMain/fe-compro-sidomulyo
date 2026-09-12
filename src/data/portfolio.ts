@@ -218,26 +218,47 @@ export const portfolioData: PortfolioItem[] = [
     ]
   },
   {
-    id: "port-5",
-    slug: "cat-oven-branding-fleet-bus-pariwisata",
-    title: "Cat Oven & Branding Fleet - Bus Pariwisata",
+    id: "port-muffler-hino-500",
+    slug: "penggantian-muffler-knalpot-hino-500",
+    title: "Penggantian Muffler Knalpot - Hino 500",
     category: "Other Services",
     categorySlug: "other-services",
-    image: "/images/service-painting.png",
-    beforeImage: "/images/service-body-repair.png",
-    afterImage: "/images/service-painting.png",
-    client: "PO Trans Nusantara",
+    image: "/images/After Penggantian Muffler_Knalpot Hino 500 .jpg",
+    beforeImage: "/images/Before Penggantian Muffler_Knalpot Hino 500 .jpg",
+    afterImage: "/images/After Penggantian Muffler_Knalpot Hino 500 .jpg",
+    client: "PT Transportindo Jaya",
     year: "2026",
-    duration: "5 Hari Kerja",
-    description: "Pengecatan ulang standar oven industrial dan penempelan grafis livery perusahaan bus pariwisata.",
-    challenge: "Cat lama memudar dan banyak guratan halus yang mengurangi daya tarik estetika armada.",
-    solution: "Pengamplasan total hingga dasar, dempul halus, pengecatan 3 lapis di dalam ruang oven berfilter, dan finishing clear coat mengkilap.",
+    duration: "3 Hari Kerja",
+    description: "Penggantian muffler/knalpot yang mengalami kerusakan atau penurunan fungsi untuk mengembalikan kinerja sistem pembuangan kendaraan.",
+    challenge: "Muffler knalpot lama mengalami korosi berat dan kebocoran gas buang.",
+    solution: "Penggantian unit muffler knalpot baru serta penyetelan ulang bracket gantungan dan sambungan pipa.",
     workScope: [
-      "Pengamplasan & perbaikan permukaan bodi halus",
-      "Aplikasi epoxy primer & surfacer",
-      "Pengecatan warna dasar Polyurethane oven",
-      "Pemasangan cutting sticker livery & logo korporat",
-      "Pelapisan wet-look clear coat anti-UV"
+      "Pelepasan unit muffler knalpot lama yang rusak",
+      "Pemasangan unit muffler knalpot pengganti baru",
+      "Pengelasan & penyetelan bracket penopang",
+      "Pengujian kebocoran gas buang & kerapatan sambungan"
+    ]
+  },
+  {
+    id: "port-roof-rack-fuso",
+    slug: "pemasangan-roof-rack-kabin-fuso-feshdx",
+    title: "Pemasangan Roof Rack Kabin - Fuso FESHDX",
+    category: "Other Services",
+    categorySlug: "other-services",
+    image: "/images/After Roof Rack Kabin Fuso FESHDX.jpg",
+    beforeImage: "/images/Before Roof Rack Kabin Fuso FESHDX.jpg",
+    afterImage: "/images/After Roof Rack Kabin Fuso FESHDX.jpg",
+    client: "PT Fleet Transport",
+    year: "2026",
+    duration: "4 Hari Kerja",
+    description: "Pembuatan roof rack kabin dengan konstruksi custom yang disesuaikan dengan dimensi kendaraan dan kebutuhan prngguna.",
+    challenge: "Kebutuhan tambahan ruang penyimpanan barang/peralatan pendukung operasional tanpa mengurangi kenyamanan interior kabin.",
+    solution: "Fabrikasi rangka roof rack presisi bermaterial pipa besi berkualitas dengan pelapisan cat tahan cuaca.",
+    workScope: [
+      "Pengukuran & fabrikasi konstruksi roof rack kabin",
+      "Pemasangan bracket dudukan pada atap kabin",
+      "Pengecatan dasar & finishing anti-karat",
+      "Pemeriksaan kekuatan & kerapian hasil pemasangan"
     ]
   }
 ];
