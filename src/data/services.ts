@@ -45,11 +45,11 @@ export const servicesData: ServiceItem[] = [
     iconName: "RotateCcw"
   },
   {
-    id: "reconditioning",
-    slug: "reconditioning",
+    id: "other-services",
+    slug: "other-services",
     number: "03",
-    title: "Reconditioning",
-    description: "Kami membantu mengembalikan kondisi kendaraan yang telah mengalami penurunan akibat usia dan penggunaan melalui proses peremajaan yang menyeluruh. Mulai dari perbaikan bodi, penanganan korosi, pembaruan komponen, hingga penyegaran tampilan, setiap pekerjaan dilakukan untuk mengembalikan fungsi dan kesiapan kendaraan.",
+    title: "Other Services",
+    description: "Kami menangani berbagai kebutuhan pengerjaan kendaraan komersial di luar layanan utama, dengan solusi yang disesuaikan berdasarkan kondisi dan kebutuhan setiap kendaraan.",
     image: "/images/service-painting.png",
     features: [
       "Pemeriksaan kondisi kendaraan secara menyeluruh",
