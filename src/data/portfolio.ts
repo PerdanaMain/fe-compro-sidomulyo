@@ -19,17 +19,17 @@ export interface PortfolioItem {
 export const portfolioData: PortfolioItem[] = [
   {
     id: "port-1",
-    slug: "box-cargo-medium-hino-300",
-    title: "Box Cargo Medium - Hino 300",
+    slug: "perbaikan-bak-cargo-long",
+    title: "Pemulihan Bak Cargo Long",
     category: "Mechanical Repair",
     categorySlug: "mechanical-repair",
-    image: "/images/service-body-repair-2.png",
-    beforeImage: "/images/service-body-repair.png",
-    afterImage: "/images/service-body-repair-2.png",
+    image: "/images/after-bak-cargo-long.jpg",
+    beforeImage: "/images/before-bak-cargo-long.jpg",
+    afterImage: "/images/after-bak-cargo-long.jpg",
     client: "PT Transportindo Jaya",
     year: "2026",
     duration: "7 Hari Kerja",
-    description: "Perbaikan total bodi truk Hino 300 akibat insiden benturan samping. Meliputi pengetokan panel bodi, pelurusan sasis, pengelasan struktur, hingga finishing cat oven.",
+    description: "Pemulihan bak cargo long melalui penggantian plat yang mengalami korosi dengan plat baru untuk mengembalikan kondisi dan fungsi bak kendaraan.",
     challenge: "Kerusakan parah pada panel samping bodi kanan serta distorsi sasis utama yang menyebabkan pintu bak tidak dapat dikunci dengan rapat.",
     solution: "Menggunakan hydro-press sasis presisi untuk mengembalikan kelurusan rangka, penggantian plat dinding kanan, serta pengecatan oven polyurethane 3 lapis.",
     workScope: [
@@ -38,6 +38,50 @@ export const portfolioData: PortfolioItem[] = [
       "Pengelasan MIG/MAG standar industri karoseri",
       "Pengecatan dasar anti-karat epoxy primer",
       "Finishing cat oven Polyurethane (PU)"
+    ]
+  },
+  {
+    id: "port-iso-tank",
+    slug: "perbaikan-iso-tank-container",
+    title: "Perbaikan ISO Tank Container",
+    category: "Mechanical Repair",
+    categorySlug: "mechanical-repair",
+    image: "/images/after-iso-tank-container.jpg",
+    beforeImage: "/images/before-iso-tank-container.jpg",
+    afterImage: "/images/after-iso-tank-container.jpg",
+    client: "CV Energi Nusantara",
+    year: "2026",
+    duration: "10 Hari Kerja",
+    description: "Perbaikan dan pemulihan kondisi ISO Tank Container meliputi pemulihan body, frame dan ram atas serta menyempurnakan tampilan eksterior unit.",
+    challenge: "Terdapat paparan karat dan permukaan tangki yang perlu perbaikan struktur las dan proteksi pelapisan.",
+    solution: "Pembersihan karat, pengelasan ulang bagian struktur, dan pelapisan epoxy primer anti-korosi.",
+    workScope: [
+      "Pemeriksaan struktur & uji tekan tangki",
+      "Pengelasan ulang sambungan rangka & kompartemen",
+      "Pembersihan korosi & pelapisan anti-karat",
+      "Finishing & pemeriksaan akhir kelayakan"
+    ]
+  },
+  {
+    id: "port-repainting-fuso",
+    slug: "repainting-fuso-fe74hd",
+    title: "Repainting & Finishing - Fuso FE74HD",
+    category: "Mechanical Repair",
+    categorySlug: "mechanical-repair",
+    image: "/images/after-repainting-fuso-FE74HD.jpg",
+    beforeImage: "/images/before-repainting-fuso-FE74HD.jpg",
+    afterImage: "/images/after-repainting-fuso-FE74HD.jpg",
+    client: "PT Fleet Transport",
+    year: "2026",
+    duration: "5 Hari Kerja",
+    description: "Perubahan warna body kendaraan dari kuning menjadi merah dengan hasil akhir yang rapi dan merata.",
+    challenge: "Cat bodi lama pudar dan terkelupas akibat pemakaian berat operasional harian.",
+    solution: "Pengamplasan total, pelapisan epoxy anti-karat, dan pengecatan ulang oven Polyurethane berkilau.",
+    workScope: [
+      "Pengamplasan & pembersihan permukaan bodi",
+      "Pelapisan dasar epoxy primer anti-karat",
+      "Pengecatan ulang Polyurethane sistem oven",
+      "Finishing clear coat & detailing"
     ]
   },
   {

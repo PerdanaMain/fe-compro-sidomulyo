@@ -126,57 +126,6 @@ export default async function PortfolioDetailPage({ params }: Props) {
               title={project.title}
             />
           </Card>
-
-          {/* Detailed Case Study / Description Text */}
-          {(project.challenge || project.solution || (project.workScope && project.workScope.length > 0)) && (
-            <Card className="p-6 sm:p-8 bg-white border border-slate-200 shadow-sm space-y-8">
-              {/* Challenge */}
-              {project.challenge && (
-                <div className="space-y-3">
-                  <h3 className="font-heading text-lg font-bold uppercase text-slate-900 border-l-4 border-amber-500 pl-3">
-                    Kondisi Awal & Tantangan
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                    {project.challenge}
-                  </p>
-                </div>
-              )}
-
-              {/* Solution */}
-              {project.solution && (
-                <div className="space-y-3">
-                  <h3 className="font-heading text-lg font-bold uppercase text-slate-900 border-l-4 border-blue-700 pl-3">
-                    Solusi & Penanganan Sidomulyo Abadhi
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                    {project.solution}
-                  </p>
-                </div>
-              )}
-
-              {/* Work Scope Checklist */}
-              {project.workScope && project.workScope.length > 0 && (
-                <div className="pt-4 border-t border-slate-100 space-y-4">
-                  <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-slate-900">
-                    Ruang Lingkup Pekerjaan:
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {project.workScope.map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 flex items-start gap-3"
-                      >
-                        <CheckCircle2 className="w-4 h-4 text-blue-700 shrink-0 mt-0.5" />
-                        <span className="text-xs sm:text-sm font-medium text-slate-800">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </Card>
-          )}
         </div>
 
         {/* Related Projects Section */}

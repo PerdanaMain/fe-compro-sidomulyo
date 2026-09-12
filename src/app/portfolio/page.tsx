@@ -6,7 +6,7 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Hasil Pekerjaan & Portofolio Karoseri",
+  title: "Portofolio Karoseri",
   description: "Dokumentasi hasil pengerjaan bodi truk, perbaikan sasis, dan pembuatan karoseri custom Sidomulyo Abadhi di Sidoarjo.",
   alternates: {
     canonical: "/portfolio"
@@ -33,9 +33,6 @@ export default function PortfolioPage() {
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-wide">
               Portofolio Kami
             </h1>
-            <p className="text-slate-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-              Sebagian proyek perbaikan dan pembuatan bodi kendaraan yang telah kami selesaikan.
-            </p>
           </div>
         </Container>
       </section>
