@@ -15,7 +15,7 @@ interface PortfolioGridProps {
 }
 
 export function PortfolioGrid({
-  title = "Portfolio Kami",
+  title = "Portofolio Kami",
   subtitle = "Temukan berbagai portofolio hasil pengerjaan karoseri dan perbaikan armada terbaik kami.",
   limit = 3,
   align = "center",
