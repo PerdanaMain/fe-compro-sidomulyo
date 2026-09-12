@@ -46,7 +46,7 @@ export function Footer() {
                 className="object-contain"
               />
               <span className="font-heading font-extrabold text-lg tracking-tight text-slate-900 uppercase">
-                SIDOMULYO ABADHI
+                CV. SIDOMULYO ABADHI
               </span>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed font-normal">
