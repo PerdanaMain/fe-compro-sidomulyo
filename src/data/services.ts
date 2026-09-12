@@ -11,10 +11,10 @@ export interface ServiceItem {
 
 export const servicesData: ServiceItem[] = [
   {
-    id: "body-repair",
-    slug: "body-repair",
+    id: "mechanical-repair",
+    slug: "mechanical-repair",
     number: "01",
-    title: "Body Repair",
+    title: "Mechanical Repair",
     description: "Kami melayani perbaikan bodi kendaraan dengan pengerjaan yang presisi dan terukur. Setiap pekerjaan berfokus pada pemulihan struktur, bentuk, dan tampilan kendaraan agar kembali optimal dan siap beroperasi.",
     image: "/images/service-body-repair.png",
     features: [
@@ -52,13 +52,12 @@ export const servicesData: ServiceItem[] = [
     description: "Kami menangani berbagai kebutuhan pengerjaan kendaraan komersial di luar layanan utama, dengan solusi yang disesuaikan berdasarkan kondisi dan kebutuhan setiap kendaraan.",
     image: "/images/service-painting.png",
     features: [
-      "Pemeriksaan kondisi kendaraan secara menyeluruh",
-      "Perbaikan bagian bodi dan struktur yang mengalami kerusakan",
-      "Penanganan korosi dan penggantian bagian yang keropos",
-      "Perbaikan atau pembaruan komponen pendukung",
-      "Perbaikan interior dan eksterior kendaraan",
-      "Pengecatan ulang dan penyegaran tampilan",
-      "Finishing, detailing, dan pemeriksaan akhir"
+      "Mechanical Repair",
+      "Reconditioning",
+      "Custom Fabrication",
+      "Hydraulic Repair",
+      "Exhaust Repair/Replacement",
+      "Dan pekerjaan khusus lainnya"
     ],
     iconName: "Paintbrush"
   },

@@ -64,7 +64,7 @@ export const defaultProcessGroups: ProcessGroup[] = [
         step: "06",
         title: "Proses Pengerjaan",
         description:
-          "Kendaraan ditangani sesuai layanan yang dipilih, meliputi Body Repair, Karoseri Custom Body, Rekaroseri, atau Other Services, dengan tahapan pengerjaan yang disesuaikan dengan kondisi dan kebutuhan kendaraan."
+          "Kendaraan ditangani sesuai layanan yang dipilih, meliputi Mechanical Repair, Karoseri Custom Body, Rekaroseri, atau Other Services, dengan tahapan pengerjaan yang disesuaikan dengan kondisi dan kebutuhan kendaraan."
       },
       {
         step: "07",
