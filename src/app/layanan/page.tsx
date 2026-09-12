@@ -62,7 +62,7 @@ export default function LayananPage() {
 
       {/* Portfolio Preview Section */}
       <PortfolioGrid
-        title="Hasil Pekerjaan Kami"
+        title="Portofolio kami"
         subtitle="Temukan berbagai portofolio hasil pengerjaan karoseri dan perbaikan armada terbaik kami."
         limit={3}
         align="center"
