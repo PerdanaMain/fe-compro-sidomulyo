@@ -130,26 +130,91 @@ export const portfolioData: PortfolioItem[] = [
     ]
   },
   {
-    id: "port-4",
-    slug: "karoseri-dump-truck-hino-fm",
-    title: "Karoseri Dump Truck - Hino FM 260",
+    id: "port-box-cargo-hino",
+    slug: "karoseri-box-cargo-hino-300",
+    title: "Box Cargo Medium - Hino 300",
     category: "Karoseri Custom Body",
     categorySlug: "karoseri-custom-body",
-    image: "/images/service-karoseri-custom.png",
-    beforeImage: "/images/service-body-repair-2.png",
-    afterImage: "/images/service-karoseri-custom.png",
-    client: "PT Pertambangan Mandiri",
+    image: "/images/After Box Cargo Hino 300.jpg",
+    beforeImage: "/images/Before Box Cargo Hino 300.jpg",
+    afterImage: "/images/After Box Cargo Hino 300.jpg",
+    client: "PT Transportindo Jaya",
+    year: "2026",
+    duration: "10 Hari Kerja",
+    description: "Pembuatan box cargo dengan konstruksi yang fungsional dan disesuaikan dengan kebutuhan operasional kendaraan.",
+    challenge: "Membutuhkan konstruksi bodi box yang kuat menahan beban muatan kargo tanpa mengurangi stabilitas kendaraan.",
+    solution: "Fabrikasi rangka baja presisi, pelapisan panel bodi anti-karat, dan finishing cat oven berdurabilitas tinggi.",
+    workScope: [
+      "Fabrikasi subframe & rangka bodi box",
+      "Pemasangan lantai & panel dinding box",
+      "Instalasi engsel & mekanisme pengunci pintu",
+      "Pengecatan dasar & finishing oven Polyurethane"
+    ]
+  },
+  {
+    id: "port-box-pendingin-fuso",
+    slug: "karoseri-box-pendingin-fuso-fe74l",
+    title: "Box Pendingin Medium - Fuso FE74L",
+    category: "Karoseri Custom Body",
+    categorySlug: "karoseri-custom-body",
+    image: "/images/After Box Pendingin Fuso FE74L.jpg",
+    beforeImage: "/images/Before Box Pendingin Fuso FE74L.jpg",
+    afterImage: "/images/After Box Pendingin Fuso FE74L.jpg",
+    client: "PT Cold Chain Indonesia",
     year: "2026",
     duration: "12 Hari Kerja",
-    description: "Pembuatan karoseri dump truck heavy duty kapasitas 24 m³ bermaterial plat high-tensile tahan gesek untuk sektor konstruksi.",
-    challenge: "Kebutuhan konstruksi bak yang ekstra kuat menahan benturan batu koral tanpa menambah bobot berlebih pada kendaraan.",
-    solution: "Desain bodi lekukan presisi menggunakan plat high-tensile steel, subframe reinforced, dan hidrolik hoist tipe tipper heavy duty.",
+    description: "Pembuatan box pendingin untuk menunjang kebutuhan distribusi  dengan konstruksi yang disesuaikan kebutuhan operasional dan spesifikasi unit.",
+    challenge: "Menjaga kestabilan suhu dingin internal secara konsisten selama pengiriman jarak jauh.",
+    solution: "Aplikasi Sandwich Panel berinsulasi padat tebal 100mm dan lantai aluminium bordes anti-slip.",
     workScope: [
-      "Fabrikasi subframe & bodi dump truck heavy duty",
-      "Pemasangan sistem hidrolik tipper hoist high-pressure",
-      "Pengelasan penuh continuous seam welding",
-      "Pengecatan anti-karat & lapisan proteksi gesekan",
-      "Pengujian uji angkat beban & fungsi hidrolik"
+      "Perakitan Sandwich Panel insulasi dingin",
+      "Pemasangan subframe aluminium & lantai bordes",
+      "Instalasi kedudukan mesin pendingin refrigrasi",
+      "Pengujian kedap suhu & finishing bodi"
+    ]
+  },
+  {
+    id: "port-box-pendingin-traga",
+    slug: "karoseri-box-pendingin-isuzu-traga",
+    title: "Box Pendingin Medium - Isuzu Traga",
+    category: "Karoseri Custom Body",
+    categorySlug: "karoseri-custom-body",
+    image: "/images/After Box Pendingin Isuzu Traga.jpeg",
+    beforeImage: "/images/Before Box Pendingin Isuzu Traga.jpg",
+    afterImage: "/images/After Box Pendingin Isuzu Traga.jpeg",
+    client: "PT Logistics Express",
+    year: "2026",
+    duration: "8 Hari Kerja",
+    description: "Pembuatan box pendingin untuk menunjang kebutuhan distribusi dengan konstruksi yang disesuaikan kebutuhan operasional dan spesifikasi unit.",
+    challenge: "Kebutuhan dimensi box yang pas dengan sasis kendaraan ringan namun berkapasitas insulasi optimal.",
+    solution: "Konstruksi box pendingin kompak berbobot efisien dengan kerapatan pintu berseal karet ganda.",
+    workScope: [
+      "Fabrikasi konstruksi rangka box kompak",
+      "Pemasangan lapisan peredam suhu polyurethane",
+      "Pemasangan pintu & seal karet kedap udara",
+      "Pengecatan & pengujian kelayakan"
+    ]
+  },
+  {
+    id: "port-tangki-kuzer",
+    slug: "karoseri-tangki-stainless-steel-kuzer-150",
+    title: "Tangki Stainless Steel - Kuzer RKE 150",
+    category: "Karoseri Custom Body",
+    categorySlug: "karoseri-custom-body",
+    image: "/images/After Tangki Stainless Steel Kuzer 150.jpg",
+    beforeImage: "/images/Before Tangki Stainless Steel Kuzer 150.jpg",
+    afterImage: "/images/After Tangki Stainless Steel Kuzer 150.jpg",
+    client: "CV Tirta Mandiri",
+    year: "2026",
+    duration: "14 Hari Kerja",
+    description: "Pembuatan tangki stainless steel dengan konstruksi yang disesuaikan dengan kebutuhan dan penggunaan operasional.",
+    challenge: "Kebutuhan material food-grade tahan karat dengan tingkat kerapatan las sempurna tanpa potensi kebocoran.",
+    solution: "Fabrikasi plat stainless steel high-grade dengan teknik pengelasan TIG continuous seam dan polished finishing.",
+    workScope: [
+      "Fabrikasi bodi tangki stainless steel food-grade",
+      "Pengelasan TIG continuous seam & uji hidrostatik",
+      "Pemasangan dudukan sasis & katup muat cair",
+      "Polishing & finishing permukaan tangki"
     ]
   },
   {
@@ -173,29 +238,6 @@ export const portfolioData: PortfolioItem[] = [
       "Pengecatan warna dasar Polyurethane oven",
       "Pemasangan cutting sticker livery & logo korporat",
       "Pelapisan wet-look clear coat anti-UV"
-    ]
-  },
-  {
-    id: "port-6",
-    slug: "box-pendingin-medium-fuso-fe74l",
-    title: "Box Pendingin Medium - Fuso FE74L",
-    category: "Karoseri Custom Body",
-    categorySlug: "karoseri-custom-body",
-    image: "/images/service-karoseri-custom-2.png",
-    beforeImage: "/images/service-reconditioning.png",
-    afterImage: "/images/service-karoseri-custom-2.png",
-    client: "PT Cold Chain Indonesia",
-    year: "2026",
-    duration: "8 Hari Kerja",
-    description: "Pembuatan bodi box refrigated suhu minus presisi tinggi untuk distribusi makanan beku.",
-    challenge: "Menjaga suhu stabil di bawah -18°C secara konsisten di jalur transportasi antar kota.",
-    solution: "Aplikasi teknologi Sandwich Panel berisolasi polyurethane tebal 100mm dengan lantai plat aluminium bordes.",
-    workScope: [
-      "Perakitan Sandwich Panel insulasi dingin",
-      "Pemasangan subframe aluminium ringan & kokoh",
-      "Instalasi dudukan mesin pendingin refrigrasi",
-      "Pemasangan engsel & pengunci stainless heavy-duty",
-      "Pengujian kebocoran suhu & sertifikasi bodi"
     ]
   }
 ];
