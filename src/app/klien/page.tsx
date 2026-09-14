@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
 import { Container } from "@/components/ui/container";
-import { clientsData } from "@/data/clients";
 import { generateBreadcrumbSchema } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -39,23 +38,6 @@ export default function KlienPage() {
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
             Dari operator logistik hingga instansi, kami dipercaya menangani berbagai kebutuhan bodi kendaraan komersial.
           </p>
-        </div>
-
-        {/* Client Grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {clientsData.map((client) => (
-            <div
-              key={client.id}
-              className="bg-white rounded-xl p-6 sm:p-8 text-center border border-slate-200/90 shadow-xs flex flex-col items-center justify-center min-h-[130px] hover:shadow-md transition-all group"
-            >
-              <h3 className="font-heading text-base sm:text-lg font-bold text-slate-900 tracking-wide group-hover:text-[#1546a0] transition-colors">
-                {client.name}
-              </h3>
-              <p className="text-xs text-slate-500 mt-1.5 font-normal">
-                {client.category}
-              </p>
-            </div>
-          ))}
         </div>
 
         {/* CTA Section */}
