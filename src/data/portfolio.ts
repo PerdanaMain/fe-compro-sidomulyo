@@ -251,7 +251,7 @@ export const portfolioData: PortfolioItem[] = [
     client: "PT Fleet Transport",
     year: "2026",
     duration: "4 Hari Kerja",
-    description: "Pembuatan roof rack kabin dengan konstruksi custom yang disesuaikan dengan dimensi kendaraan dan kebutuhan prngguna.",
+    description: "Pembuatan roof rack kabin dengan konstruksi custom yang disesuaikan dengan dimensi kendaraan dan kebutuhan pengguna.",
     challenge: "Kebutuhan tambahan ruang penyimpanan barang/peralatan pendukung operasional tanpa mengurangi kenyamanan interior kabin.",
     solution: "Fabrikasi rangka roof rack presisi bermaterial pipa besi berkualitas dengan pelapisan cat tahan cuaca.",
     workScope: [
@@ -260,6 +260,51 @@ export const portfolioData: PortfolioItem[] = [
       "Pengecatan dasar & finishing anti-karat",
       "Pemeriksaan kekuatan & kerapian hasil pemasangan"
     ]
+  },
+  {
+    id: "port-cabin-protector",
+    slug: "pemasangan-cabin-protector",
+    title: "Pemasangan Cabin Protector",
+    category: "Other Services",
+    categorySlug: "other-services",
+    image: "/images/After Cabin Protector .png",
+    beforeImage: "/images/Before Cabin Protector .png",
+    afterImage: "/images/After Cabin Protector .png",
+    client: "PT Fleet Transport",
+    year: "2026",
+    duration: "3 Hari Kerja",
+    description: "Pembuatan cabin protector custom dengan konstruksi kuat dan desain yang disesuaikan dengan kendaraan.",
+    challenge: "Risiko kerusakan bodi kabin belakang akibat benturan material muatan berat saat proses angkut dan pembongkaran.",
+    solution: "Fabrikasi rangka cabin protector kokoh bermaterial pipa besi dan plat presisi dengan pelapisan cat oven anti-karat.",
+    workScope: [
+      "Pengukuran & fabrikasi konstruksi pelindung kabin",
+      "Pengelasan & perakitan bracket dudukan utama",
+      "Pelapisan cat dasar anti-karat & finishing polyurethane",
+      "Pemasangan presisi pada bodi kabin & pengujian kekuatan"
+    ]
+  },
+  {
+    id: "port-repair-hidrolis-hino-500",
+    slug: "repair-sistem-hidrolis-hino-500",
+    title: "Repair Sistem Hidrolis - Hino 500",
+    category: "Other Services",
+    categorySlug: "other-services",
+    image: "/images/After Repair Hidrolis Hino 500.jpg",
+    beforeImage: "/images/Before Repair Hidrolis Hino 500.jpg",
+    afterImage: "/images/After Repair Hidrolis Hino 500.jpg",
+    client: "CV Energi Nusantara",
+    year: "2026",
+    duration: "4 Hari Kerja",
+    description: "Pemeriksaan dan perbaikan sistem hidrolis kendaraan, meliputi komponen dan mekanisme hidrolis yang mengalami kerusakan atau penurunan fungsi.",
+    challenge: "Penurunan tekanan hidrolik dan adanya kebocoran rembesan oli pada tabung silinder hidrolik.",
+    solution: "Bongkar total unit hidrolis, penggantian seal kit hidrolik, penggantian oli hidrolik baru, serta uji tekan ulang.",
+    workScope: [
+      "Pemeriksaan & pengujian tekanan awal sistem hidrolis",
+      "Pembongkaran & perbaikan silinder serta pompa hidrolik",
+      "Penggantian seal kit hidrolik & penyetelan ulang jalur tekanan",
+      "Pengisian oli hidrolik & pengujian fungsi angkat/beban"
+    ]
   }
 ];
+
 
